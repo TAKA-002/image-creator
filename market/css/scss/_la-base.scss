@@ -1,0 +1,19 @@
+// layoutのベース
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Hiragino Kaku Gothic Pro", "HiraKakuPro-W6";
+}
+
+// サイドバー
+aside {
+  width: 25%;
+  min-width: 240px;
+  border-right: 2px solid $layout-border;
+}
+
+// メインエリア
+main {
+  flex: 1;
+}

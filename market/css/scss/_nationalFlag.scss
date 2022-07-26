@@ -1,0 +1,40 @@
+// listの国旗アイコン
+
+.icon {
+  // アメリカ
+  &-US {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/us.png");
+    }
+  }
+  // 中国
+  &-CN {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/cn.png");
+    }
+  }
+  // 日本
+  &-JP {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/jp.png");
+    }
+  }
+  // EURO
+  &-EU {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/eu.png");
+    }
+  }
+  // イギリス
+  &-GB {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/gb.png");
+    }
+  }
+  // ドイツ
+  &-GER {
+    &::before {
+      background-image: url("/WEB-Feature-Image-Creator/image/flags/ger.png");
+    }
+  }
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "Monday": {
+      "isShow": true,
+      "days": "00月00日(月)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Tuesday": {
+      "isShow": true,
+      "days": "00月00日(火)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Wednesday": {
+      "isShow": true,
+      "days": "00月00日(水)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Thursday": {
+      "isShow": true,
+      "days": "00月00日(木)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Friday": {
+      "isShow": true,
+      "days": "00月00日(金)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Saturday": {
+      "isShow": true,
+      "days": "00月00日(土)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    },
+
+    "Sunday": {
+      "isShow": true,
+      "days": "00月00日(日)",
+      "plansRow": [
+        {
+          "nationalFlag": "US",
+          "colorCode": "red",
+          "plan": "アメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカアメリカ",
+          "paintParts": "アメリカ"
+        },
+        {
+          "nationalFlag": "CN",
+          "colorCode": "",
+          "plan": "中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国",
+          "paintParts": ""
+        },
+        {
+          "nationalFlag": "EU",
+          "colorCode": "",
+          "plan": "日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本日本",
+          "paintParts": ""
+        }
+      ]
+    }
+  }
+]

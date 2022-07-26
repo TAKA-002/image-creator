@@ -1,0 +1,19 @@
+// 共通変数
+@import "./scss/_available";
+
+// 全体レイアウト
+@import "./scss/_la-base";
+@import "./scss/_la-main";
+@import "./scss/_la-sidebar";
+
+// テーブル
+@import "./scss/_list-table";
+
+// 国旗の部分のスタイル
+// @import "./scss/_nationalFlag";
+
+// 使い方セクション
+@import "./scss/_usage";
+
+// その他
+@import "./scss/_util";
