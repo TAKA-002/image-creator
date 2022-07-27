@@ -1,219 +1,173 @@
 [
   {
-    "row_1": {
-      "isShow": true,
-      "days": "7月25日(月)",
-      "plansRow": [
-        {
-          "nationalFlag": "GER",
-          "colorCode": "",
-          "plan": "Ifo景況感指数(7月)",
-          "paintParts": ""
-        }
-      ]
-    },
-
-
-    "row_2": {
-      "isShow": true,
-      "days": "7月26日(火)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "日銀 金融政策決定会合 議事要旨(6/16〜17)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": " 2Q決算)キヤノン",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "US",
-          "colorCode": "",
-          "plan": "新築住宅販売件数(6月)",
-          "paintParts": ""
-        }
-      ]
-    },
-
-
-    "row_3": {
-      "isShow": true,
-      "days": "7月27日(水)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "1Q決算)JR東海 東京ガス 信越化学工業",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "US",
-          "colorCode": "",
-          "plan": "耐久財受注(6月・速報値)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "本決算)マイクロソフト",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "2Q決算)アルファベット(傘下にグーグル)",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_4": {
-      "isShow": true,
-      "days": "7月28日(木)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "1Q決算)オリエンタルランド",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "US",
-          "colorCode": "",
-          "plan": "FOMC FRBパウエル議長会見",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "実質GDP(4～6月)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "2Q決算)メタ(旧フェイスブック)",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_5": {
-      "isShow": true,
-      "days": "7月29日(金)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "日銀 金融政策決定会合 主な意見(7/20〜21)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "1Q決算)味の素 ソニーG みずほFG JR東日本",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "EU",
-          "colorCode": "",
-          "plan": "実質GDP(4～6月)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "消費者物価指数(7月)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "US",
-          "colorCode": "",
-          "plan": "ミシガン大学消費者態度指数(7月・確報値)",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "3Q決算)アップル",
-          "paintParts": ""
-        },
-        {
-          "nationalFlag": "",
-          "colorCode": "",
-          "plan": "2Q決算)アマゾン・ドット・コム",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_6": {
-      "isShow": false,
-      "days": "7月10日(日)",
-      "plansRow": [
-        {
-            "nationalFlag": "JP",
-            "colorCode": "",
-            "plan": "参議院選挙 投開票",
-            "paintParts": ""
-        }
-      ]
-    },
-
-    "row_7": {
-      "isShow": false,
-      "days": "5月11日(水)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-            "plan": "本決算：トヨタ自動車、ソフトバンク",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_8": {
-      "isShow": false,
-      "days": "5月13日(金)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-            "plan": "本決算：みずほFG、三井住友FG",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_9": {
-      "isShow": false,
-      "days": "5月13日(金)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "",
-          "paintParts": ""
-        }
-      ]
-    },
-
-    "row_10": {
-      "isShow": false,
-      "days": "5月13日(金)",
-      "plansRow": [
-        {
-          "nationalFlag": "JP",
-          "colorCode": "",
-          "plan": "",
-          "paintParts": ""
-        }
-      ]
-    }
+    "id": "001",
+    "day": "0725",
+    "date": "0",
+    "nationalFlag": "GER",
+    "plan": "Ifo景況感指数(7月)",
+    "colorCode": "red",
+    "paintParts": ""
+  },
+  {
+    "id": "002",
+    "day": "0726",
+    "date": "1",
+    "nationalFlag": "JP",
+    "plan": "日銀 金融政策決定会合 議事要旨(6/16〜17)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "003",
+    "day": "0726",
+    "date": "1",
+    "nationalFlag": "JP",
+    "plan": "2Q決算)キヤノン",
+    "colorCode": "#0000ee",
+    "paintParts": "キヤノン"
+  },
+  {
+    "id": "004",
+    "day": "0726",
+    "date": "1",
+    "nationalFlag": "USA",
+    "plan": "新築住宅販売件数(6月)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "005",
+    "day": "0727",
+    "date": "2",
+    "nationalFlag": "JP",
+    "plan": "1Q決算)JR東海 東京ガス 信越化学工業",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "006",
+    "day": "0727",
+    "date": "2",
+    "nationalFlag": "USA",
+    "plan": "耐久財受注(6月・速報値)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "007",
+    "day": "0727",
+    "date": "2",
+    "nationalFlag": "USA",
+    "plan": "本決算)マイクロソフト",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "008",
+    "day": "0727",
+    "date": "2",
+    "nationalFlag": "USA",
+    "plan": "2Q決算)アルファベット(傘下にグーグル)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "009",
+    "day": "0728",
+    "date": "3",
+    "nationalFlag": "JP",
+    "plan": "1Q決算)オリエンタルランド",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "010",
+    "day": "0728",
+    "date": "3",
+    "nationalFlag": "USA",
+    "plan": "FOMC FRBパウエル議長会見",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "011",
+    "day": "0728",
+    "date": "3",
+    "nationalFlag": "USA",
+    "plan": "実質GDP(4～6月)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "012",
+    "day": "0728",
+    "date": "3",
+    "nationalFlag": "USA",
+    "plan": "2Q決算)メタ(旧フェイスブック)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "013",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "JP",
+    "plan": "日銀 金融政策決定会合 主な意見(7/20〜21)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "014",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "JP",
+    "plan": "1Q決算)味の素 ソニーG みずほFG JR東日本",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "015",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "EU",
+    "plan": "実質GDP(4～6月)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "016",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "EU",
+    "plan": "消費者物価指数(7月)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "017",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "USA",
+    "plan": "ミシガン大学消費者態度指数(7月・確報値)",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "018",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "USA",
+    "plan": "3Q決算)アップル",
+    "colorCode": "",
+    "paintParts": ""
+  },
+  {
+    "id": "019",
+    "day": "0729",
+    "date": "4",
+    "nationalFlag": "USA",
+    "plan": "2Q決算)アマゾン・ドット・コム",
+    "colorCode": "",
+    "paintParts": ""
   }
 ]

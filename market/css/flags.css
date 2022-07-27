@@ -1,68 +1,65 @@
-/* =============================================
-  国旗の画像を追加したらこちらのファイルに追記
-============================================= */
-
 /* アメリカ */
 .icon-US::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/us.png");
+  background-image: url("../image/flags/us.png");
 }
 
 /* 中国 */
 .icon-CN::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/cn.png");
+  background-image: url("../image/flags/cn.png");
 }
 
 /* 日本 */
 .icon-JP::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/jp.png");
+  background-image: url("../image/flags/jp.png");
 }
 
 /* EURO */
 .icon-EU::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/eu.png");
+  background-image: url("../image/flags/eu.png");
 }
 
 /* イギリス */
 .icon-GB::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/gb.png");
+  background-image: url("../image/flags/gb.png");
 }
 
 /* ドイツ */
 .icon-GER::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/ger.png");
+  background-image: url("../image/flags/ger.png");
 }
 
 /* 韓国 */
 .icon-KO::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/ko.png");
+  background-image: url("../image/flags/ko.png");
 }
 
 /* フランス */
 .icon-FR::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/fr.png");
+  background-image: url("../image/flags/fr.png");
 }
 
 /* オーストラリア */
 .icon-AUS::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/aus.png");
+  background-image: url("../image/flags/aus.png");
 }
 
 /* ブラジル */
 .icon-BR::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/br.png");
+  background-image: url("../image/flags/br.png");
 }
-/*
-スイス：正方形
- */
+
+/* スイス：正方形 */
 .icon-SW::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/sw.jpg");
+  background-image: url("../image/flags/sw.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
+
 /* ニュージーランド */
 .icon-NZ::before{
-  background-image: url("/WEB-Feature-Image-Creator/image/flags/nz.png");
+  background-image: url("../image/flags/nz.png");
 }
+
 /* フラッグなし（国関係ない項目の場合であり、同じ国が連続する場合ではない。） */
 .icon-NNF::before{
   content: none !important;
