@@ -1,6 +1,6 @@
 <div class="container max-w-7xl mx-auto mt-8">
   <div class="mb-4">
-    <h1 class="font-sanserif text-3xl font-bold"><?php echo $pageTitle ?> リスト一覧</h1>
+    <h1 class="font-sanserif text-3xl font-bold">データ一覧</h1>
     <div class="flex justify-between mt-10">
       <div>
         <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規リスト追加</button>

@@ -22,7 +22,7 @@ $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
 </head>
 
 <body>
-  <main class="bg-gray-100 rounded-2xl h-screen relative">
+  <main class="bg-gray-100 rounded-2xl relative">
     <div class="flex">
       <div class="h-screen my-4 ml-4 shadow-lg relative" style="width: 320px;">
         <!-- sidebar -->

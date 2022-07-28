@@ -4,7 +4,7 @@ class JsonData
 {
   public function getJsonDataPath($pageDir)
   {
-    return dirname(__FILE__, 5) . "/{$pageDir}/data/data.json";
+    return dirname(__FILE__, 4) . "/{$pageDir}/data/data.json";
   }
 
   public function getJsonData($path)

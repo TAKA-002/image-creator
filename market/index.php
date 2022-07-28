@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../php/model/function/pageData.php');
-require_once(__DIR__ . '/../common/php/model/function/jsonData.php');
+require_once(__DIR__ . '/../php/model/function/jsonData.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
@@ -24,18 +24,16 @@ $targetJsonData = $jsonData->getJsonData($path);
 </head>
 
 <body>
-  <main class="bg-gray-100 rounded-2xl h-screen overflow-hidden relative">
-    <div class="flex items-start justify-between">
-      <div class="h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80">
+  <main class="bg-gray-100 rounded-2xl relative">
+    <div class="flex">
+      <div class="my-4 ml-4 shadow-lg relative" style="width: 320px;">
         <!-- sidebar -->
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 
-      <div class="flex flex-col w-full pl-0 md:p-4 md:space-y-4">
-        <!-- header -->
-        <?php include(dirname(__FILE__, 2) . "/php/view/partial/header.php"); ?>
+      <div class="flex flex-col pl-0 my-4 ml-4" style="width: 1280px;">
+        <div class="pb-24">
 
-        <div class="overflow-auto h-screen pb-24 px-4 md:px-6">
           <h1 class="text-4xl font-semibold text-gray-800 mt-8">マーケット興味津々 - 注目予定</h1>
           <h2 class="text-md text-gray-400 mt-4"><a href="https://www3.nhk.or.jp/news/special/stockmarket/" target="_blank">https://www3.nhk.or.jp/news/special/stockmarket/</a></h2>
 
