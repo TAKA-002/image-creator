@@ -24,23 +24,23 @@ $targetJsonData = $jsonData->getJsonData($path);
 </head>
 
 <body>
-  <main class="bg-gray-100 rounded-2xl relative">
+  <main class="bg-gray-100 rounded-2xl relative w-min pr-4">
     <div class="flex">
       <div class="my-4 ml-4 shadow-lg relative" style="width: 320px;">
         <!-- sidebar -->
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 
-      <div class="flex flex-col pl-0 my-4 ml-4" style="width: 1280px;">
+      <div class="flex flex-col pl-0 my-4 ml-4">
         <div class="pb-24">
 
           <h1 class="text-4xl font-semibold text-gray-800 mt-8">マーケット興味津々 - 注目予定</h1>
           <h2 class="text-md text-gray-400 mt-4"><a href="https://www3.nhk.or.jp/news/special/stockmarket/" target="_blank">https://www3.nhk.or.jp/news/special/stockmarket/</a></h2>
 
-          <div class="flex flex-row mt-8 pb-16">
+          <div class="flex flex-row flex-nowrap mt-8 pb-16">
 
             <!-- データ操作エリア -->
-            <div class="basis-2/3 mr-8">
+            <div class="mr-8">
               <div class="shadow-lg px-4 py-6 w-full bg-white relative">
 
                 <?php include(dirname(__FILE__) . "/php/view/partial/list.php"); ?>
@@ -49,7 +49,7 @@ $targetJsonData = $jsonData->getJsonData($path);
             </div>
 
             <!-- テーブル部分 -->
-            <div class="basis-1/3">
+            <div class="w-max">
               <div class="shadow-lg px-4 py-6 w-full bg-white relative">
                 <div id="capture" class="list">
                   <div class="list__header">
