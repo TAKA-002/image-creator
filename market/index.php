@@ -43,7 +43,7 @@ $targetJsonData = $jsonData->getJsonData($path);
               <div class="shadow-lg px-4 py-6 w-full bg-white relative">
 
                 <!-- データ操作エリア -->
-                <?php include(dirname(__FILE__) . "/php/view/partial/list.php"); ?>
+                <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
 
               </div>
             </div>
