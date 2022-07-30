@@ -42,13 +42,13 @@ $targetJsonData = $jsonData->getJsonData($path);
             <div class="mr-8">
               <div class="shadow-lg px-4 py-6 w-full bg-white relative">
 
-                <!-- データ操作エリア -->
+                <!-- データ操作テーブルエリア -->
                 <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
 
               </div>
             </div>
 
-            <!-- テーブル部分 -->
+            <!-- 画像になる部分 -->
             <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
 
           </div>
