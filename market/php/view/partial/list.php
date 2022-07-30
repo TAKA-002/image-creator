@@ -2,9 +2,9 @@
   <div class="mb-4">
     <h1 class="font-sanserif text-3xl font-bold">データ一覧</h1>
     <div class="flex justify-between mt-10">
-      <div>
+      <!-- <div>
         <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規リスト追加</button>
-      </div>
+      </div> -->
       <div class="flex justify-end">
         <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">ダウンロード</button>
       </div>
@@ -18,7 +18,7 @@
           <thead>
             <tr>
               <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">MOVE</th>
-              <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">月日（曜）</th>
+              <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">年月日</th>
               <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">国旗</th>
               <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">テキスト</th>
               <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">色付け部分</th>
@@ -68,9 +68,9 @@
                 </td>
 
                 <!-- 国旗 -->
-                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 w-max">
                   <div class="text-sm leading-5 text-gray-900">
-                    <span class="icon icon-US">
+                    <span class="icon icon-<?php echo $listData["nationalFlag"] ?>">
                       <input type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
                     </span>
                   </div>

@@ -1,7 +1,7 @@
 [
   {
     "id": "001",
-    "day": "0725",
+    "day": "20220725",
     "date": "0",
     "nationalFlag": "GER",
     "plan": "Ifo景況感指数(7月)",
@@ -10,7 +10,7 @@
   },
   {
     "id": "002",
-    "day": "0726",
+    "day": "20220726",
     "date": "1",
     "nationalFlag": "JP",
     "plan": "日銀 金融政策決定会合 議事要旨(6/16〜17)",
@@ -19,7 +19,7 @@
   },
   {
     "id": "003",
-    "day": "0726",
+    "day": "20220726",
     "date": "1",
     "nationalFlag": "JP",
     "plan": "2Q決算)キヤノン",
@@ -28,16 +28,16 @@
   },
   {
     "id": "004",
-    "day": "0726",
+    "day": "20220726",
     "date": "1",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "新築住宅販売件数(6月)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "005",
-    "day": "0727",
+    "day": "20220727",
     "date": "2",
     "nationalFlag": "JP",
     "plan": "1Q決算)JR東海 東京ガス 信越化学工業",
@@ -46,34 +46,34 @@
   },
   {
     "id": "006",
-    "day": "0727",
+    "day": "20220727",
     "date": "2",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "耐久財受注(6月・速報値)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "007",
-    "day": "0727",
+    "day": "20220727",
     "date": "2",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "本決算)マイクロソフト",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "008",
-    "day": "0727",
+    "day": "20220727",
     "date": "2",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "2Q決算)アルファベット(傘下にグーグル)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "009",
-    "day": "0728",
+    "day": "20220728",
     "date": "3",
     "nationalFlag": "JP",
     "plan": "1Q決算)オリエンタルランド",
@@ -82,34 +82,34 @@
   },
   {
     "id": "010",
-    "day": "0728",
+    "day": "20220728",
     "date": "3",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "FOMC FRBパウエル議長会見",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "011",
-    "day": "0728",
+    "day": "20220728",
     "date": "3",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "実質GDP(4～6月)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "012",
-    "day": "0728",
+    "day": "20220728",
     "date": "3",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "2Q決算)メタ(旧フェイスブック)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "013",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
     "nationalFlag": "JP",
     "plan": "日銀 金融政策決定会合 主な意見(7/20〜21)",
@@ -118,7 +118,7 @@
   },
   {
     "id": "014",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
     "nationalFlag": "JP",
     "plan": "1Q決算)味の素 ソニーG みずほFG JR東日本",
@@ -127,7 +127,7 @@
   },
   {
     "id": "015",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
     "nationalFlag": "EU",
     "plan": "実質GDP(4～6月)",
@@ -136,7 +136,7 @@
   },
   {
     "id": "016",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
     "nationalFlag": "EU",
     "plan": "消費者物価指数(7月)",
@@ -145,27 +145,27 @@
   },
   {
     "id": "017",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "ミシガン大学消費者態度指数(7月・確報値)",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "018",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "3Q決算)アップル",
     "colorCode": "",
     "paintParts": ""
   },
   {
     "id": "019",
-    "day": "0729",
+    "day": "20220729",
     "date": "4",
-    "nationalFlag": "USA",
+    "nationalFlag": "US",
     "plan": "2Q決算)アマゾン・ドット・コム",
     "colorCode": "",
     "paintParts": ""
