@@ -1,0 +1,18 @@
+.icon {
+  position: relative;
+  padding-left: 40px;
+}
+
+.icon::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 23px;
+  left: 0;
+  top: 3px;
+}
+
+.icon input {
+  vertical-align: middle;
+}

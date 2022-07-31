@@ -65,7 +65,7 @@
                   </form>
                 </td>
 
-                <!-- 月日（曜日） -->
+                <!-- 年月日 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
                     <input class="w-full text-center" type="text" name="day" value="<?php echo $listData["day"]; ?>">
@@ -75,9 +75,8 @@
                 <!-- 国旗 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
-                    <span class="icon icon-<?php echo $listData["nationalFlag"] ?>">
-                      <input type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
-                    </span>
+                    <span class="icon icon-<?php echo $listData["nationalFlag"] ?>"></span>
+                    <input type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
                   </div>
                 </td>
 
@@ -137,24 +136,3 @@
   </div>
 
 </div>
-
-<style>
-  .icon {
-    position: relative;
-    padding-left: 40px;
-  }
-
-  .icon::before {
-    display: inline-block;
-    position: absolute;
-    content: "";
-    width: 34px;
-    height: 23px;
-    left: 0;
-    top: 3px;
-  }
-
-  .icon input {
-    vertical-align: middle;
-  }
-</style>
