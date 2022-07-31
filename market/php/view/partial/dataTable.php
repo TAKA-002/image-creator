@@ -22,13 +22,13 @@
         <table class="table-fixed w-full">
           <thead>
             <tr>
-              <th style=" width: 20px;" class="text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">MOVE</th>
-              <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
-              <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
-              <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
-              <!-- <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th> -->
-              <!-- <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th> -->
-              <th class="px-6 py-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">Action</th>
+              <th style=" width: 80px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">MOVE</th>
+              <th style="width: 120px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
+              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
+              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
+              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th>
+              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th>
+              <th class="py-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">Action</th>
             </tr>
           </thead>
 
@@ -68,7 +68,7 @@
                 <!-- 月日（曜日） -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
-                    <input type="text" name="day" value="<?php echo $listData["day"]; ?>">
+                    <input class="w-full text-center" type="text" name="day" value="<?php echo $listData["day"]; ?>">
                   </div>
                 </td>
 
@@ -89,18 +89,18 @@
                 </td>
 
                 <!-- 色付け部分 -->
-                <!-- <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    <div class="text-sm leading-5 text-gray-900">
-                      <input type="text" name="plan" value="<?php echo $listData["paintParts"] ?>">
-                    </div>
-                  </td> -->
+                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                  <div class="text-sm leading-5 text-gray-900">
+                    <input type="text" name="plan" value="<?php echo $listData["paintParts"] ?>">
+                  </div>
+                </td>
 
                 <!-- カラー -->
-                <!-- <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    <div class="text-sm leading-5 text-gray-900">
-                      <input type="text" name="plan" value="<?php echo $listData["colorCode"] ?>">
-                    </div>
-                  </td> -->
+                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                  <div class="text-sm leading-5 text-gray-900">
+                    <input type="text" name="plan" value="<?php echo $listData["colorCode"] ?>">
+                  </div>
+                </td>
 
                 <!-- 編集 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
