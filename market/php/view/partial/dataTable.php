@@ -24,7 +24,7 @@
             <tr>
               <th style=" width: 80px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">MOVE</th>
               <th style="width: 120px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
-              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
+              <th style="width: 120px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
               <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
               <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th>
               <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th>
@@ -35,6 +35,9 @@
           <tbody class="bg-white">
             <?php foreach ($targetJsonData as $key => $listData) : ?>
               <tr>
+                <!-- ID -->
+                <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
+
                 <!-- MOVE -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST" class="m-0 text-center leading-none" style="line-height: 7px;">
@@ -61,9 +64,6 @@
                     </button>
                   </form>
                 </td>
-
-                <!-- ID -->
-                <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
 
                 <!-- 月日（曜日） -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
