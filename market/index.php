@@ -4,8 +4,14 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
+
+// $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
+
+// $path - jsonファイルを取得する
 $path = $jsonData->getJsonDataPath($pageDir);
+
+// 表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
 
 ?>
@@ -27,7 +33,7 @@ $targetJsonData = $jsonData->getJsonData($path);
   <main class="bg-gray-100 rounded-2xl relative w-min pr-4">
     <div class="flex">
       <div class="my-4 ml-4 shadow-lg relative" style="width: 320px;">
-        <!-- sidebar -->
+        <!-- サイドバー => use $pageDir -->
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 
@@ -39,7 +45,7 @@ $targetJsonData = $jsonData->getJsonData($path);
 
           <div class="flex flex-row flex-nowrap mt-8 pb-16">
 
-            <!-- データ操作テーブルエリア -->
+            <!-- データ操作テーブルエリア => use $targetJsonData -->
             <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
 
             <!-- 画像になる部分 -->

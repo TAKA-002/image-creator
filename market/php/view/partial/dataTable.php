@@ -22,13 +22,13 @@
         <table class="table-fixed w-full">
           <thead>
             <tr>
-              <th style=" width: 80px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">MOVE</th>
-              <th style="width: 120px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
-              <th style="width: 120px;" class="py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
-              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
-              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th>
-              <th class="py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th>
-              <th class="py-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">Action</th>
+              <th style=" width: 80px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">MOVE</th>
+              <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
+              <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
+              <th style="width: 440px" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
+              <th style="width: 200px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th>
+              <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th>
+              <th style="width: 80px;" class="py-3 px-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">編集</th>
             </tr>
           </thead>
 
@@ -74,35 +74,35 @@
 
                 <!-- 国旗 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900">
-                    <span class="icon icon-<?php echo $listData["nationalFlag"] ?>"></span>
-                    <input type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
+                  <div class="flex items-center text-sm leading-5 text-gray-900">
+                    <span style="width:40px; height:30px;" class="icon icon-<?php echo $listData["nationalFlag"] ?>"></span>
+                    <input class="w-1/2 text-center" type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
                   </div>
                 </td>
 
                 <!-- テキスト -->
-                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
-                    <input type="text" name="plan" value="<?php echo $listData["plan"] ?>">
+                    <input class="w-full" type="text" name="plan" value="<?php echo $listData["plan"] ?>">
                   </div>
                 </td>
 
                 <!-- 色付け部分 -->
-                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
-                    <input type="text" name="plan" value="<?php echo $listData["paintParts"] ?>">
+                    <input class="w-full" type="text" name="plan" value="<?php echo $listData["paintParts"] ?>">
                   </div>
                 </td>
 
                 <!-- カラー -->
-                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900">
-                    <input type="text" name="plan" value="<?php echo $listData["colorCode"] ?>">
+                    <input class="w-full text-left" type="text" name="plan" value="<?php echo $listData["colorCode"] ?>">
                   </div>
                 </td>
 
                 <!-- 編集 -->
-                <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
+                <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="../../view/action/edit.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <button type="submit" class="text-indigo-600 hover:text-indigo-900">
@@ -114,7 +114,7 @@
                 </td>
 
                 <!-- 削除 -->
-                <td class="text-sm font-medium leading-5 whitespace-no-wrap border-b border-gray-200 ">
+                <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="../../view/action/delete-comp.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <button type="submit">
