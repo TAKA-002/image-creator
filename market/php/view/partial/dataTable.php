@@ -8,11 +8,24 @@
       <div class="mb-4">
         <h1 class="font-sanserif text-3xl font-bold">データ一覧</h1>
         <div class="flex justify-between mt-10">
-          <!-- <div>
-        <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規リスト追加</button>
-          </div> -->
+          <div>
+
+            <form action="" method="POST">
+              <input type="hidden" name="dispFlag" value="2">
+              <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規データ追加</button>
+            </form>
+
+            <form action="" method="POST">
+              <input type="hidden" name="dispFlag" value="4">
+              <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
+            </form>
+
+          </div>
+
           <div class="flex justify-end">
-            <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">ダウンロード</button>
+            <!-- <form action="" method="POST"> -->
+            <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">画像用JSON作成</button>
+            <!-- </form> -->
           </div>
         </div>
       </div>
@@ -67,43 +80,36 @@
 
                 <!-- 年月日 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900">
-                    <input class="w-full text-center" type="text" name="day" value="<?php echo $listData["day"]; ?>">
-                  </div>
+                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["day"]; ?></div>
                 </td>
 
                 <!-- 国旗 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="flex items-center text-sm leading-5 text-gray-900">
                     <span style="width:40px; height:30px;" class="icon icon-<?php echo $listData["nationalFlag"] ?>"></span>
-                    <input class="w-1/2 text-center" type="text" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
+                    <span class="w-1/2 text-center"><?php echo $listData["nationalFlag"]; ?></span>
                   </div>
                 </td>
 
                 <!-- テキスト -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900">
-                    <input class="w-full" type="text" name="plan" value="<?php echo $listData["plan"] ?>">
-                  </div>
+                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["plan"] ?></div>
                 </td>
 
                 <!-- 色付け部分 -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900">
-                    <input class="w-full" type="text" name="plan" value="<?php echo $listData["paintParts"] ?>">
-                  </div>
+                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["paintParts"] ?></div>
                 </td>
 
                 <!-- カラー -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900">
-                    <input class="w-full text-left" type="text" name="plan" value="<?php echo $listData["colorCode"] ?>">
-                  </div>
+                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["colorCode"] ?></div>
                 </td>
 
                 <!-- 編集 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
-                  <form action="../../view/action/edit.php" method="POST">
+                  <form action="" method="POST">
+                    <input type="hidden" name="dispFlag" value="3">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <button type="submit" class="text-indigo-600 hover:text-indigo-900">
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

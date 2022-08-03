@@ -1,9 +1,33 @@
 <?php
+
+/**
+ * < プラン >
+ * data.jsonからデータは取得して、それをテーブルに表示。その表示されたデータが編集されたらdata.jsonの内容を更新していく。
+ * 理想はその場編集。
+ * 最後に、編集が終わったら、data.jsonを元に、画像データを表示するためのimageTableData.jsonファイルを生成するようにする。
+ * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
+ * あとは、html2canvasライブラリで、ダウンロードできるようにする。
+ * 
+ * < 追加機能 アイデアメモ >
+ * ・国旗追加機能
+ * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
+ * flag.cssファイルを更新するようにするということ。
+ * images/flagsの中に画像もリネームして格納できるようにする。
+ * 
+ * ・スーパーリロードボタン
+ * 意外とかんたんっぽい。
+ */
+
 require_once(__DIR__ . '/../php/model/function/pageData.php');
 require_once(__DIR__ . '/../php/model/function/jsonData.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
+
+const LIST_FLAG = "1";
+const CREATE_FLAG = "2";
+const EDIT_FLAG = "3";
+const ADD_NATIONALFLAG_FLAG = "4";
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
@@ -11,7 +35,7 @@ $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
 // $path - jsonファイルを取得する
 $path = $jsonData->getJsonDataPath($pageDir);
 
-// 表示させたいjsonデータを取得
+// 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
 
 ?>
@@ -45,8 +69,26 @@ $targetJsonData = $jsonData->getJsonData($path);
 
           <div class="flex flex-row flex-nowrap mt-8 pb-16">
 
-            <!-- データ操作テーブルエリア => use $targetJsonData -->
-            <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
+            <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
+              <!-- データ操作テーブルエリア => use $targetJsonData -->
+              <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
+
+              <!-- 新規作成画面と差し替える -->
+            <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
+              <?php include(dirname(__FILE__) . "/php/view/actions/create.php"); ?>
+
+              <!-- 編集画面と差し替える -->
+            <?php elseif ($_POST["dispFlag"] === EDIT_FLAG) : ?>
+              <?php include(dirname(__FILE__) . "/php/view/actions/edit.php"); ?>
+
+              <!-- 国旗追加画面と差し替える -->
+            <?php elseif ($_POST["dispFlag"] === ADD_NATIONALFLAG_FLAG) : ?>
+              <?php include(dirname(__FILE__) . "/php/view/actions/addNationalFlag.php"); ?>
+
+              <!-- それ以外はエラーページへ -->
+            <?php else : ?>
+              <?php include(dirname(__FILE__) . "/php/view/partial/error.php"); ?>
+            <?php endif; ?>
 
             <!-- 画像になる部分 -->
             <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
