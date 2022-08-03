@@ -31,50 +31,58 @@ $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
 
       <div class="flex flex-col pl-0 my-4 ml-4" style="width: 1280px;">
         <div class="h-screen pb-24">
-          <div class="flex flex-row flex-wrap justify-around">
+          <div class="flex flex-row flex-wrap">
 
             <!-- マーケットコラム -->
-            <div style="width: 620px;">
+            <div class="mr-4" style="width: 620px;">
               <div class="mb-4 mx-0">
                 <div class="shadow-lg rounded-2xl bg-white p-4 hover:opacity-75 transition ease-in duration-200 mb-4">
-                  <a href="/image-creator/market/" class="flex-row gap-2 flex justify-center items-center">
-                    <div class="flex-shrink-0 w-2/12">
-                      <span class="block relative">
-                        <img alt="" src="/image-creator/market/image/icon/market.svg" class="mx-auto object-contain h-16 w-16 " />
-                      </span>
-                    </div>
-                    <div class="flex flex-col w-8/12">
-                      <span class="text-gray-600 text-lg font-medium">マーケットコラム興味津々 - 注目予定</span>
-                    </div>
-                    <div class="flex-shrink-0 w-2/12">
-                      <span class="block relative">
-                        <img alt="" src="/image-creator/common/images/icon/arrow.svg" class="mx-auto object-contain h-4 w-4 " />
-                      </span>
-                    </div>
-                  </a>
+                  <form action="/image-creator/market/" method="POST">
+                    <input type="hidden" name="dispFlag" value="1">
+
+                    <button type="submit" class="px-3 flex-row flex items-center w-full">
+                      <div class="flex-none flex-shrink-0 w-14">
+                        <span class="block relative">
+                          <img alt="" src="/image-creator/market/image/icon/market.svg" class="mx-auto object-contain h-16 w-16 " />
+                        </span>
+                      </div>
+                      <div class="flex-grow text-left px-5">
+                        <span class="text-gray-600 text-lg font-medium">マーケットコラム興味津々 - 注目予定</span>
+                      </div>
+                      <div class="flex-none flex-shrink-0 w-14">
+                        <span class="block relative">
+                          <img alt="" src="/image-creator/common/images/icon/arrow.svg" class="mx-auto object-contain h-4 w-4 " />
+                        </span>
+                      </div>
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
 
-            <!-- 未定 -->
-            <div style="width: 620px;">
+            <!-- 追加時使用テンプレート -->
+            <div class="mr-4" style="width: 620px;">
               <div class="mb-4 mx-0">
                 <div class="shadow-lg rounded-2xl bg-white p-4 hover:opacity-75 transition ease-in duration-200 mb-4">
-                  <a href="" class="flex-row gap-2 flex justify-center items-center">
-                    <div class="flex-shrink-0 w-2/12">
-                      <span class="block relative">
-                        <img alt="" src="/image-creator/common/images/icon/nodecide.svg" class="mx-auto object-contain h-16 w-16 " />
-                      </span>
-                    </div>
-                    <div class="flex flex-col w-8/12">
-                      <span class="text-gray-600 text-lg font-medium">未定</span>
-                    </div>
-                    <div class="flex-shrink-0 w-2/12">
-                      <span class="block relative">
-                        <img alt="" src="/image-creator/common/images/icon/arrow.svg" class="mx-auto object-contain h-4 w-4 " />
-                      </span>
-                    </div>
-                  </a>
+                  <form action="" method="POST">
+                    <input type="hidden" name="dispFlag" value="1">
+
+                    <button type="submit" class="px-3 flex-row flex items-center w-full">
+                      <div class="flex-none flex-shrink-0 w-14">
+                        <span class="block relative">
+                          <img alt="" src="/image-creator/common/images/icon/nodecide.svg" class="mx-auto object-contain h-16 w-16 " />
+                        </span>
+                      </div>
+                      <div class="flex-grow text-left px-5">
+                        <span class="text-gray-600 text-lg font-medium">追加時使用テンプレート</span>
+                      </div>
+                      <div class="flex-none flex-shrink-0 w-14">
+                        <span class="block relative">
+                          <img alt="" src="/image-creator/common/images/icon/arrow.svg" class="mx-auto object-contain h-4 w-4 " />
+                        </span>
+                      </div>
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
