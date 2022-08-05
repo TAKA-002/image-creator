@@ -7,13 +7,13 @@
  * 最後に、編集が終わったら、data.jsonを元に、画像データを表示するためのimageTableData.jsonファイルを生成するようにする。
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
- * 
+ *
  * < 追加機能 アイデアメモ >
  * ・国旗追加機能
  * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
  * flag.cssファイルを更新するようにするということ。
  * images/flagsの中に画像もリネームして格納できるようにする。
- * 
+ *
  * ・スーパーリロードボタン
  * 意外とかんたんっぽい。
  */
@@ -61,13 +61,13 @@ $targetJsonData = $jsonData->getJsonData($path);
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 
-      <div class="flex flex-col pl-0 my-4 ml-4">
+      <div class="flex flex-col pl-0 my-4 ml-8">
         <div class="pb-24">
 
           <h1 class="text-4xl font-semibold text-gray-800 mt-8">マーケット興味津々 - 注目予定</h1>
           <h2 class="text-md text-gray-400 mt-4"><a href="https://www3.nhk.or.jp/news/special/stockmarket/" target="_blank">https://www3.nhk.or.jp/news/special/stockmarket/</a></h2>
 
-          <div class="flex flex-row flex-nowrap mt-8 pb-16">
+          <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
 
             <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
               <!-- データ操作テーブルエリア => use $targetJsonData -->

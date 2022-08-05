@@ -7,26 +7,21 @@
       <!-- 見出し・操作ボタン -->
       <div class="mb-4">
         <h1 class="font-sanserif text-3xl font-bold">データ一覧</h1>
-        <div class="flex justify-between mt-10">
-          <div>
+        <div class="flex justify-start mt-10">
 
-            <form action="" method="POST">
-              <input type="hidden" name="dispFlag" value="2">
-              <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規データ追加</button>
-            </form>
+          <form action="" method="POST">
+            <input type="hidden" name="dispFlag" value="2">
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規データ追加</button>
+          </form>
 
-            <form action="" method="POST">
-              <input type="hidden" name="dispFlag" value="4">
-              <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
-            </form>
+          <form action="" method="POST">
+            <input type="hidden" name="dispFlag" value="4">
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
+          </form>
 
-          </div>
-
-          <div class="flex justify-end">
-            <!-- <form action="" method="POST"> -->
+          <form action="" method="POST">
             <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">画像用JSON作成</button>
-            <!-- </form> -->
-          </div>
+          </form>
         </div>
       </div>
 
