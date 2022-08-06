@@ -8,7 +8,7 @@
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
  *
- * < 追加機能 アイデアメモ >
+ * < 追加機能 メモ >
  * ・国旗追加機能
  * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
  * flag.cssファイルを更新するようにするということ。
@@ -24,10 +24,17 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 $pageData = new pageData();
 $jsonData = new JsonData();
 
+$opeDataFlag = "";
+
+// DISPFLAG
 const LIST_FLAG = "1";
 const CREATE_FLAG = "2";
 const EDIT_FLAG = "3";
 const ADD_NATIONALFLAG_FLAG = "4";
+
+// DATAFLAG
+const EDITED_DATA_FLAG = "2";
+
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
@@ -37,6 +44,24 @@ $path = $jsonData->getJsonDataPath($pageDir);
 
 // 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
+
+// 編集の場合
+if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== EDITED_DATA_FLAG) {
+  $targetEditData["id"] = $_POST["id"];
+  $targetEditData["day"] = $_POST["day"];
+  $targetEditData["plan"] = $_POST["plan"];
+  $targetEditData["nationalFlag"] = $_POST["nationalFlag"];
+  $targetEditData["paintParts"] = $_POST["paintParts"];
+  $targetEditData["colorCode"] = $_POST["colorCode"];
+}
+
+// 編集画面からデータ取得した場合
+if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
+  echo '<pre>';
+  var_dump($_POST);
+  echo '</pre>';
+}
+
 
 ?>
 
@@ -67,33 +92,36 @@ $targetJsonData = $jsonData->getJsonData($path);
           <h1 class="text-4xl font-semibold text-gray-800 mt-8">マーケット興味津々 - 注目予定</h1>
           <h2 class="text-md text-gray-400 mt-4"><a href="https://www3.nhk.or.jp/news/special/stockmarket/" target="_blank">https://www3.nhk.or.jp/news/special/stockmarket/</a></h2>
 
-          <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
+          <<<<<<< HEAD <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
+            =======
+            <div class="flex flex-row flex-nowrap mt-8 pb-16 w-max">
+              >>>>>>> 74ed6988dceb814b60912d494ed3dfa3c9ce1197
 
-            <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
-              <!-- データ操作テーブルエリア => use $targetJsonData -->
-              <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
+              <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
+                <!-- データ操作テーブルエリア => use $targetJsonData -->
+                <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
 
-              <!-- 新規作成画面と差し替える -->
-            <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
-              <?php include(dirname(__FILE__) . "/php/view/actions/create.php"); ?>
+                <!-- 新規作成画面と差し替える -->
+              <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
+                <?php include(dirname(__FILE__) . "/php/view/actions/create.php"); ?>
 
-              <!-- 編集画面と差し替える -->
-            <?php elseif ($_POST["dispFlag"] === EDIT_FLAG) : ?>
-              <?php include(dirname(__FILE__) . "/php/view/actions/edit.php"); ?>
+                <!-- 編集画面と差し替える -->
+              <?php elseif ($_POST["dispFlag"] === EDIT_FLAG) : ?>
+                <?php include(dirname(__FILE__) . "/php/view/actions/edit.php"); ?>
 
-              <!-- 国旗追加画面と差し替える -->
-            <?php elseif ($_POST["dispFlag"] === ADD_NATIONALFLAG_FLAG) : ?>
-              <?php include(dirname(__FILE__) . "/php/view/actions/addNationalFlag.php"); ?>
+                <!-- 国旗追加画面と差し替える -->
+              <?php elseif ($_POST["dispFlag"] === ADD_NATIONALFLAG_FLAG) : ?>
+                <?php include(dirname(__FILE__) . "/php/view/actions/addNationalFlag.php"); ?>
 
-              <!-- それ以外はエラーページへ -->
-            <?php else : ?>
-              <?php include(dirname(__FILE__) . "/php/view/partial/error.php"); ?>
-            <?php endif; ?>
+                <!-- それ以外はエラーページへ -->
+              <?php else : ?>
+                <?php include(dirname(__FILE__) . "/php/view/partial/error.php"); ?>
+              <?php endif; ?>
 
-            <!-- 画像になる部分 -->
-            <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
+              <!-- 画像になる部分 -->
+              <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
 
-          </div>
+            </div>
         </div>
       </div>
     </div>
