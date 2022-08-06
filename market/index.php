@@ -8,7 +8,7 @@
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
  *
- * < 追加機能 アイデアメモ >
+ * < 追加機能 メモ >
  * ・国旗追加機能
  * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
  * flag.cssファイルを更新するようにするということ。
@@ -24,10 +24,17 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 $pageData = new pageData();
 $jsonData = new JsonData();
 
+$opeDataFlag = "";
+
+// DISPFLAG
 const LIST_FLAG = "1";
 const CREATE_FLAG = "2";
 const EDIT_FLAG = "3";
 const ADD_NATIONALFLAG_FLAG = "4";
+
+// DATAFLAG
+const EDITED_DATA_FLAG = "2";
+
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
@@ -37,6 +44,24 @@ $path = $jsonData->getJsonDataPath($pageDir);
 
 // 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
+
+// 編集の場合
+if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== EDITED_DATA_FLAG) {
+  $targetEditData["id"] = $_POST["id"];
+  $targetEditData["day"] = $_POST["day"];
+  $targetEditData["plan"] = $_POST["plan"];
+  $targetEditData["nationalFlag"] = $_POST["nationalFlag"];
+  $targetEditData["paintParts"] = $_POST["paintParts"];
+  $targetEditData["colorCode"] = $_POST["colorCode"];
+}
+
+// 編集画面からデータ取得した場合
+if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
+  echo '<pre>';
+  var_dump($_POST);
+  echo '</pre>';
+}
+
 
 ?>
 
