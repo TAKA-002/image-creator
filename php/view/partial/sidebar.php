@@ -26,7 +26,7 @@
       <!-- market start -->
       <form action="/image-creator/market/" method="POST">
         <input type="hidden" name="pos" value="market">
-        <input type="hidden" name="dispFlag" value="1">
+        <input type="hidden" name="dispFlag" value="list">
 
         <?php if ($pageDir === "market") : ?>
           <button type="submit" class="w-full font-thin uppercase text-blue-500 flex items-center p-4 my-2 transition-colors duration-200 justify-start bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 border-r-4 border-blue-500">
