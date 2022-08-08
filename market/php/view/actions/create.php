@@ -20,7 +20,10 @@
       </div>
 
       <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
-        <form method="POST" action="./create-comp.php">
+        <form action="" method="POST">
+          <input type="hidden" name="dispFlag" value="list">
+          <input type="hidden" name="opeDataFlag" value="created">
+
           <!-- ID -->
           <input class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="listid" type="hidden" name="id" value="<?php echo $createdId; ?>" />
 

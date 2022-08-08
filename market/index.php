@@ -36,7 +36,8 @@ const EDIT_FLAG = "edit";
 const ADD_NATIONALFLAG_FLAG = "nationalflag";
 
 // DATAFLAG
-const EDITED_DATA_FLAG = "2";
+const DATA_CREATE_FLAG = "created";
+const DATA_EDIT_FLAG = "2";
 
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
@@ -48,8 +49,10 @@ $path = $jsonData->getJsonDataPath($pageDir);
 // 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
 
-// 新規追加
-if ($_POST["dispFlag"] === CREATE_FLAG) {
+/**
+ * 新規作成
+ */
+if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] !== DATA_CREATE_FLAG) {
   // IDを作成(IDの条件は他に存在しないIDであることなので、まずは現在のデータのIDを取得)
   $createdId = $dataObj->createId($targetJsonData);
 
@@ -57,8 +60,19 @@ if ($_POST["dispFlag"] === CREATE_FLAG) {
   $flagsList = $dataObj->getFlagJsonData();
 }
 
-// 編集の場合
-if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== EDITED_DATA_FLAG) {
+/**
+ * 新規作成データがPOSTで送られてきた場合
+ */
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_CREATE_FLAG) {
+  echo '<pre>';
+  var_dump($_POST);
+  echo '</pre>';
+}
+
+/**
+ * 編集
+ */
+if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== DATA_EDIT_FLAG) {
   $targetEditData["id"] = $_POST["id"];
   $targetEditData["day"] = $_POST["day"];
   $targetEditData["plan"] = $_POST["plan"];
@@ -68,7 +82,7 @@ if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== EDITED_DATA_FL
 }
 
 // 編集画面からデータ取得した場合
-if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
+if ($_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
   echo '<pre>';
   var_dump($_POST);
   echo '</pre>';
