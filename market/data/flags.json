@@ -1,5 +1,10 @@
 [
   {
+    "name": "NNF",
+    "display": "なし",
+    "img": ""
+  },
+  {
     "name": "US",
     "display": "アメリカ",
     "img": "../image/flags/US.png"
@@ -16,7 +21,7 @@
   },
   {
     "name": "EU",
-    "display": "EURO",
+    "display": "ユーロ",
     "img": "../image/flags/EU.png"
   },
   {
@@ -58,10 +63,5 @@
     "name": "NZ",
     "display": "ニュージーランド",
     "img": "../image/flags/NZ.png"
-  },
-  {
-    "name": "NNF",
-    "display": "フラッグなし",
-    "img": ""
   }
 ]

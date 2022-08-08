@@ -36,11 +36,9 @@
             <label class="block text-sm font-bold text-gray-700" for="displayNum">国旗</label>
 
             <select id="displayNum" class="block w-full mt-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="dispTop">
-              <option value="0" selected>テキスト横に国旗を表示しない</option>
-              <option value="1">1番目</option>
-              <option value="2">2番目</option>
-              <option value="3">3番目</option>
-              <option value="4">4番目</option>
+              <?php for ($i = 0; $i < count($flagsList); $i++) : ?>
+                <option value="<?php echo $flagsList[$i]["name"]; ?>" style=""><?php echo $flagsList[$i]["display"]; ?></option>
+              <?php endfor; ?>
             </select>
           </div>
 

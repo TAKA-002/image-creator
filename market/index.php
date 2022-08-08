@@ -27,7 +27,7 @@ require_once(__DIR__ . '/php/model/function/data.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
-$data = new Data();
+$dataObj = new Data();
 
 // DISPFLAG
 const LIST_FLAG = "list";
@@ -51,7 +51,10 @@ $targetJsonData = $jsonData->getJsonData($path);
 // 新規追加
 if ($_POST["dispFlag"] === CREATE_FLAG) {
   // IDを作成(IDの条件は他に存在しないIDであることなので、まずは現在のデータのIDを取得)
-  $createdId = $data->createId($targetJsonData);
+  $createdId = $dataObj->createId($targetJsonData);
+
+  // 今ある国旗のリストを作成
+  $flagsList = $dataObj->getFlagJsonData();
 }
 
 // 編集の場合
