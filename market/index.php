@@ -27,7 +27,7 @@ $jsonData = new JsonData();
 $opeDataFlag = "";
 
 // DISPFLAG
-const LIST_FLAG = "1";
+const LIST_FLAG = "list";
 const CREATE_FLAG = "2";
 const EDIT_FLAG = "3";
 const ADD_NATIONALFLAG_FLAG = "4";
