@@ -95,8 +95,8 @@ if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
           <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
             <div class="flex flex-row flex-nowrap mt-8 pb-16 w-max">
 
+              <!-- データ操作テーブルエリア => use $targetJsonData -->
               <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
-                <!-- データ操作テーブルエリア => use $targetJsonData -->
                 <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
 
                 <!-- 新規作成画面と差し替える -->
