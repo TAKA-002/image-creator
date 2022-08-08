@@ -1,0 +1,67 @@
+[
+  {
+    "name": "US",
+    "display": "アメリカ",
+    "img": "../image/flags/US.png"
+  },
+  {
+    "name": "CN",
+    "display": "中国",
+    "img": "../image/flags/CN.png"
+  },
+  {
+    "name": "JP",
+    "display": "日本",
+    "img": "../image/flags/JP.png"
+  },
+  {
+    "name": "EU",
+    "display": "EURO",
+    "img": "../image/flags/EU.png"
+  },
+  {
+    "name": "GB",
+    "display": "イギリス",
+    "img": "../image/flags/GB.png"
+  },
+  {
+    "name": "GER",
+    "display": "ドイツ",
+    "img": "../image/flags/GER.png"
+  },
+  {
+    "name": "KO",
+    "display": "韓国",
+    "img": "../image/flags/KO.png"
+  },
+  {
+    "name": "FR",
+    "display": "フランス",
+    "img": "../image/flags/FR.png"
+  },
+  {
+    "name": "AUS",
+    "display": "オーストラリア",
+    "img": "../image/flags/AUS.png"
+  },
+  {
+    "name": "BR",
+    "display": "ブラジル",
+    "img": "../image/flags/BR.png"
+  },
+  {
+    "name": "SW",
+    "display": "スイス",
+    "img": "../image/flags/SW.png"
+  },
+  {
+    "name": "NZ",
+    "display": "ニュージーランド",
+    "img": "../image/flags/NZ.png"
+  },
+  {
+    "name": "NNF",
+    "display": "フラッグなし",
+    "img": ""
+  }
+]
