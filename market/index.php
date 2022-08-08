@@ -92,10 +92,8 @@ if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
           <h1 class="text-4xl font-semibold text-gray-800 mt-8">マーケット興味津々 - 注目予定</h1>
           <h2 class="text-md text-gray-400 mt-4"><a href="https://www3.nhk.or.jp/news/special/stockmarket/" target="_blank">https://www3.nhk.or.jp/news/special/stockmarket/</a></h2>
 
-          <<<<<<< HEAD <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
-            =======
+          <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
             <div class="flex flex-row flex-nowrap mt-8 pb-16 w-max">
-              >>>>>>> 74ed6988dceb814b60912d494ed3dfa3c9ce1197
 
               <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
                 <!-- データ操作テーブルエリア => use $targetJsonData -->
@@ -122,9 +120,9 @@ if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
               <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
 
             </div>
+          </div>
         </div>
       </div>
-    </div>
   </main>
 </body>
 
