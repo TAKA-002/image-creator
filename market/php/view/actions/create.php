@@ -9,12 +9,12 @@
         <h1 class="font-sanserif text-3xl font-bold">新規データ追加</h1>
         <div class="flex justify-start mt-10">
           <form action="" method="POST">
-            <input type="hidden" name="dispFlag" value="4">
+            <input type="hidden" name="dispFlag" value="nationalflag">
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
           </form>
           <form action="" method="POST">
-            <input type="hidden" name="dispFlag" value="1">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>データ一覧へ</button>
+            <input type="hidden" name="dispFlag" value="list">
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>リスト表示</button>
           </form>
         </div>
       </div>

@@ -6,16 +6,16 @@
 
       <!-- 見出し・操作ボタン -->
       <div class="mb-4">
-        <h1 class="font-sanserif text-3xl font-bold">予定一覧</h1>
+        <h1 class="font-sanserif text-3xl font-bold">リスト</h1>
         <div class="flex justify-start mt-10">
 
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="create">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規データ追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規追加</button>
           </form>
 
           <form action="" method="POST">
-            <input type="hidden" name="dispFlag" value="4">
+            <input type="hidden" name="dispFlag" value="nationalflag">
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
           </form>
 
@@ -104,7 +104,7 @@
                 <!-- 編集 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST">
-                    <input type="hidden" name="dispFlag" value="3">
+                    <input type="hidden" name="dispFlag" value="edit">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <input type="hidden" name="day" value="<?php echo $listData["day"]; ?>">
                     <input type="hidden" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">

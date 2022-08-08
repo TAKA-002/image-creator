@@ -29,8 +29,8 @@ $opeDataFlag = "";
 // DISPFLAG
 const LIST_FLAG = "list";
 const CREATE_FLAG = "create";
-const EDIT_FLAG = "3";
-const ADD_NATIONALFLAG_FLAG = "4";
+const EDIT_FLAG = "edit";
+const ADD_NATIONALFLAG_FLAG = "nationalflag";
 
 // DATAFLAG
 const EDITED_DATA_FLAG = "2";
