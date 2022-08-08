@@ -28,7 +28,7 @@ $opeDataFlag = "";
 
 // DISPFLAG
 const LIST_FLAG = "list";
-const CREATE_FLAG = "2";
+const CREATE_FLAG = "create";
 const EDIT_FLAG = "3";
 const ADD_NATIONALFLAG_FLAG = "4";
 
@@ -97,7 +97,7 @@ if ($_POST["opeDataFlag"] === EDITED_DATA_FLAG) {
 
               <!-- データ操作テーブルエリア => use $targetJsonData -->
               <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
-                <?php include(dirname(__FILE__) . "/php/view/partial/dataTable.php"); ?>
+                <?php include(dirname(__FILE__) . "/php/view/partial/list.php"); ?>
 
                 <!-- 新規作成画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
