@@ -6,7 +6,7 @@
 
       <!-- 見出し・操作ボタン -->
       <div class="mb-4">
-        <h1 class="font-sanserif text-3xl font-bold">新規データ追加</h1>
+        <h1 class="font-sanserif text-3xl font-bold">新規追加</h1>
         <div class="flex justify-start mt-10">
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="nationalflag">

@@ -18,13 +18,16 @@
  * 意外とかんたんっぽい。
  */
 
+// グローバル
 require_once(__DIR__ . '/../php/model/function/pageData.php');
 require_once(__DIR__ . '/../php/model/function/jsonData.php');
 
+// market内
+require_once(__DIR__ . '/php/model/function/data.php');
+
 $pageData = new pageData();
 $jsonData = new JsonData();
-
-$opeDataFlag = "";
+$data = new Data();
 
 // DISPFLAG
 const LIST_FLAG = "list";
@@ -44,6 +47,12 @@ $path = $jsonData->getJsonDataPath($pageDir);
 
 // 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
+
+// 新規追加
+if ($_POST["dispFlag"] === CREATE_FLAG) {
+  // IDを作成(IDの条件は他に存在しないIDであることなので、まずは現在のデータのIDを取得)
+  $createdId = $data->createId($targetJsonData);
+}
 
 // 編集の場合
 if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== EDITED_DATA_FLAG) {
