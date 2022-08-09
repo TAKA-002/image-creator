@@ -50,6 +50,7 @@
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST" class="m-0 text-center leading-none" style="line-height: 7px;">
                     <input type="hidden" name="moveFlag" value="up">
+                    <input type="hidden" name="dispFlag" value="list">
                     <input type="hidden" name="key" value="<?php echo $key ?>">
                     <input type="hidden" name="id" value="<?php echo $listData["id"] ?>">
 
@@ -62,6 +63,7 @@
 
                   <form action="" method="POST" class="mt-4 mb-0 text-center" style="line-height: 7px;">
                     <input type="hidden" name="moveFlag" value="down">
+                    <input type="hidden" name="dispFlag" value="list">
                     <input type="hidden" name="key" value="<?php echo $key ?>">
                     <input type="hidden" name="id" value="<?php echo $listData["id"] ?>">
 
@@ -75,7 +77,7 @@
 
                 <!-- 年月日 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["day"]; ?></div>
+                  <div class="text-sm leading-5 text-gray-900"><?php echo $listData["date"]; ?></div>
                 </td>
 
                 <!-- 国旗 -->
@@ -106,7 +108,7 @@
                   <form action="" method="POST">
                     <input type="hidden" name="dispFlag" value="edit">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
-                    <input type="hidden" name="day" value="<?php echo $listData["day"]; ?>">
+                    <input type="hidden" name="date" value="<?php echo $listData["date"]; ?>">
                     <input type="hidden" name="nationalFlag" value="<?php echo $listData["nationalFlag"]; ?>">
                     <input type="hidden" name="plan" value="<?php echo $listData["plan"]; ?>">
                     <input type="hidden" name="paintParts" value="<?php echo $listData["paintParts"]; ?>">
@@ -122,7 +124,9 @@
 
                 <!-- 削除 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
-                  <form action="../../view/action/delete-comp.php" method="POST">
+                  <form action="" method="POST">
+                    <input type="hidden" name="dispFlag" value="list">
+                    <input type="hidden" name="opeDataFlag" value="deleted">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <button type="submit">
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600 hover:text-red-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">

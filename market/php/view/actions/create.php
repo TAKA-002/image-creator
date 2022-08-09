@@ -36,9 +36,9 @@
 
           <!-- 国旗 -->
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="displayNum">国旗</label>
+            <label class="block text-sm font-bold text-gray-700" for="nationalFlag">国旗</label>
 
-            <select id="displayNum" class="block w-full mt-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="dispTop">
+            <select id="nationalFlag" class="block w-full mt-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="nationalFlag">
               <?php for ($i = 0; $i < count($flagsList); $i++) : ?>
                 <option value="<?php echo $flagsList[$i]["name"]; ?>" style=""><?php echo $flagsList[$i]["display"]; ?></option>
               <?php endfor; ?>
@@ -47,23 +47,23 @@
 
           <!-- テキスト -->
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="listTitle">テキスト<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="plan">テキスト<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
-            <input id="listTitle" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="title" placeholder="注目予定テキストを入力してください。（例：FOMC FRBパウエル議長会見）" required />
+            <input id="plan" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="plan" placeholder="注目予定テキストを入力してください。（例：FOMC FRBパウエル議長会見）" required />
           </div>
 
           <!-- 色付け部分 -->
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="listURL">色付け部分</label>
+            <label class="block text-sm font-bold text-gray-700" for="paintParts">色付け部分</label>
 
-            <input id="listURL" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="url" placeholder="予定文の中で色をつけたい箇所を記入してください。（例：パウエル）" />
+            <input id="paintParts" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="paintParts" placeholder="予定文の中で色をつけたい箇所を記入してください。（例：パウエル）" />
           </div>
 
           <!-- カラー -->
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="listTmb">カラー</label>
+            <label class="block text-sm font-bold text-gray-700" for="colorCode">カラー</label>
 
-            <input id="listTmb" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="img" placeholder="色を付けたい部分のカラーを入力してください。（例：red, #fff）" />
+            <input id="colorCode" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="colorCode" placeholder="色を付けたい部分のカラーを入力してください。（例：red, #fff）" />
           </div>
 
 

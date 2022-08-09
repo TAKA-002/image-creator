@@ -25,4 +25,15 @@ class JsonData
     $jsonData = json_decode($json, true);
     return $jsonData;
   }
+
+
+  /**
+   * jsonファイルを更新する
+   */
+  public function updateJsonData($path, $newData)
+  {
+    $arrJson = json_encode($newData);
+    file_put_contents($path, $arrJson);
+    return;
+  }
 }

@@ -37,8 +37,8 @@ const ADD_NATIONALFLAG_FLAG = "nationalflag";
 
 // DATAFLAG
 const DATA_CREATE_FLAG = "created";
-const DATA_EDIT_FLAG = "2";
-
+const DATA_EDIT_FLAG = "edited";
+const DATA_DELETE_FLAG = "deleted";
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
@@ -49,45 +49,100 @@ $path = $jsonData->getJsonDataPath($pageDir);
 // 編集用テーブルに表示させたいjsonデータを取得
 $targetJsonData = $jsonData->getJsonData($path);
 
+// 今ある国旗のリストを作成し、表示するため
+$flagsList = $dataObj->getFlagJsonData();
+
+// /////////////////////////////////////////////////////////////////////////
+
 /**
  * 新規作成
  */
 if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] !== DATA_CREATE_FLAG) {
+
   // IDを作成(IDの条件は他に存在しないIDであることなので、まずは現在のデータのIDを取得)
   $createdId = $dataObj->createId($targetJsonData);
-
-  // 今ある国旗のリストを作成
-  $flagsList = $dataObj->getFlagJsonData();
 }
+
 
 /**
- * 新規作成データがPOSTで送られてきた場合
+ * 新規作成：新規データがPOSTで送られてきた場合
  */
 if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_CREATE_FLAG) {
-  echo '<pre>';
-  var_dump($_POST);
-  echo '</pre>';
+
+  // 新規データを現在のJsonデータに追加。（最後尾）
+  $mergedData = $dataObj->addNewData($_POST, $targetJsonData);
+
+  // マージされたデータをjsonファイルにする
+  $jsonData->updateJsonData($path, $mergedData);
+
+  // jsonデータを再読み込み
+  $targetJsonData = $jsonData->getJsonData($path);
+
+  // opeDataFlagを空に
+  $_POST["opeDataFlag"] = "";
 }
+
+// /////////////////////////////////////////////////////////////////////////
+
+/**
+ * 削除：削除データがPOSTされてきた場合
+ */
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_DELETE_FLAG) {
+  // データを削除する
+  $deletedData = $dataObj->deleteData($_POST["id"], $targetJsonData);
+
+  // マージされたデータをjsonファイルにする
+  $jsonData->updateJsonData($path, $deletedData);
+
+  // jsonデータを再読み込み
+  $targetJsonData = $jsonData->getJsonData($path);
+
+  // opeDataFlagを空に
+  $_POST["opeDataFlag"] = "";
+}
+
+// /////////////////////////////////////////////////////////////////////////
 
 /**
  * 編集
  */
 if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== DATA_EDIT_FLAG) {
   $targetEditData["id"] = $_POST["id"];
-  $targetEditData["day"] = $_POST["day"];
+  $targetEditData["date"] = $_POST["date"];
   $targetEditData["plan"] = $_POST["plan"];
   $targetEditData["nationalFlag"] = $_POST["nationalFlag"];
   $targetEditData["paintParts"] = $_POST["paintParts"];
   $targetEditData["colorCode"] = $_POST["colorCode"];
 }
 
-// 編集画面からデータ取得した場合
+// 編集：編集画面からデータを取得した場合
 if ($_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
-  echo '<pre>';
-  var_dump($_POST);
-  echo '</pre>';
+
+  $replacedData = $dataObj->replaceData($_POST, $targetJsonData);
+
+  // 置きかえたデータをjsonファイルにする
+  $jsonData->updateJsonData($path, $replacedData);
+
+  // jsonデータを再読み込み
+  $targetJsonData = $jsonData->getJsonData($path);
+
+  // opeDataFlagを空に
+  $_POST["opeDataFlag"] = "";
 }
 
+// 移動
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["moveFlag"] === "up" || $_POST["dispFlag"] === LIST_FLAG && $_POST["moveFlag"] === "down") {
+
+  $result = $dataObj->moveData($_POST["key"], $_POST["moveFlag"], $targetJsonData);
+
+  $jsonData->updateJsonData($path, $result);
+
+  // 更新したデータをもう一度読み込む
+  $targetJsonData = $jsonData->getJsonData($path);
+
+  $_POST = array();
+  $_POST["dispFlag"] = LIST_FLAG;
+}
 
 ?>
 

@@ -6,10 +6,10 @@ class Data
   /**
    * IDをランダム整数で作成し、文字列にして返す
    * すでに存在しているIDの場合は再帰的に実行
-   * 
-   * @param object $targetJsonData 現在のJsonデータ
-   * 
-   * @return string $strNum ユニークID
+   *
+   * @param Array $targetJsonData 現在のJsonデータ
+   *
+   * @return String $strNum ユニークID
    */
   public function createId($targetJsonData)
   {
@@ -27,17 +27,17 @@ class Data
 
   /**
    * 新規作成したIDがすでに存在していないかチェック
-   * 
-   * @param string $createdId 新規作成されたID
-   * 
-   * @param array{
+   *
+   * @param String $createdId 新規作成されたID
+   *
+   * @param Array{
    *  idx => string,
    *  idx => string,
    *  idx => string,
    *  idx => string,
    * } $aryId
-   * 
-   * @return boolean
+   *
+   * @return Boolean
    */
   private function checkId($createdId, $aryId)
   {
@@ -51,10 +51,10 @@ class Data
 
   /**
    * 現在のJsonデータからIDを抽出して配列にする
-   * 
-   * @param object $targetJsonData 現在のJsonデータ
-   * 
-   * @return array{
+   *
+   * @param Array $targetJsonData 現在のJsonデータ
+   *
+   * @return Array{
    *  idx => string,
    *  idx => string,
    *  idx => string,
@@ -75,8 +75,8 @@ class Data
 
   /**
    * 現在登録されている国旗データを取得する
-   * 
-   * @return 
+   *
+   * @return
    */
   public function getFlagJsonData()
   {
@@ -94,6 +94,115 @@ class Data
   private function getFlagDataPath()
   {
     return dirname(__DIR__, 3) . "/data/flags.json";
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * 新規追加データを現状のデータの最後に追加する。
+   *
+   * @param Array $newData 新規追加データ（フラグ込みのPOST）
+   *
+   * @param Array $targetJsonData 現在リスト表示されているデータ
+   *
+   * @return Array マージされたデータ
+   */
+  public function addNewData($newData, $targetJsonData)
+  {
+    // 不要フラグ除去
+    $newData = $this->removeFlag($newData);
+    $new[] = $newData;
+
+    // 現在データに追加
+    return array_merge($targetJsonData, $new);
+  }
+
+  /**
+   * 不要なフラグを除去
+   *
+   * @param Array $data 対象データ
+   *
+   * @return Array $newData dispFlagとopeDataFlagを除去したデータ
+   */
+  private function removeFlag($data)
+  {
+    unset($data["dispFlag"]);
+    unset($data["opeDataFlag"]);
+
+    return $data;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * 削除ボタンを押したデータを削除する
+   *
+   * @param String $deleteItemId
+   *
+   * @param Array $targetJsonData 現在リスト表示されているデータ
+   */
+  public function deleteData($deleteItemId, $targetJsonData)
+  {
+
+    foreach ($targetJsonData as $key => $valie) {
+
+      if ($targetJsonData[$key]["id"] === $deleteItemId) {
+        array_splice($targetJsonData, $key, 1);
+      }
+    }
+
+    return $targetJsonData;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * データを置き換える
+   */
+  public function replaceData($editedData, $targetJsonData)
+  {
+    $editedData = $this->removeFlag($editedData);
+
+    foreach ($targetJsonData as $key => $value) {
+      if ($value["id"] === $editedData["id"]) {
+        $preparedData[$key] = $editedData;
+        /** @var array $targetJsonData */
+        array_splice($targetJsonData, $key, 1, $preparedData);
+      }
+    }
+    return $targetJsonData;
+  }
+
+
+  /**
+   * データを入れ替える
+   */
+  public function moveData($key, $moveFlag, $targetJsonData)
+  {
+    $listMaxKeyNum = count($targetJsonData) - 1;
+    $listMaxKeyStr = (string)$listMaxKeyNum;
+    $replacedData = array();
+
+    // $keyが0で、upのときは注意。逆にdownでリストの最後の数字のときも注意。何もしていないjsonを戻す。
+    if ($key === "0" && $moveFlag === "up" || $key === $listMaxKeyStr && $moveFlag === "down") {
+      return $targetJsonData;
+    }
+
+    // 一番上の項目ではなく、上へ移動のflagのとき。
+    if ($key !== "0" && $moveFlag === "up") {
+      $replacedData[$key - 1] = $targetJsonData[$key];
+      $replacedData[$key] = $targetJsonData[$key - 1];
+      array_splice($targetJsonData, $key - 1, 2, $replacedData);
+      return $targetJsonData;
+    }
+
+    // 一番下の項目ではなく、下へ移動のflagのとき。
+    if ($key !== $listMaxKeyStr && $moveFlag === "down") {
+      $replacedData[$key] = $targetJsonData[$key + 1];
+      $replacedData[$key + 1] = $targetJsonData[$key];
+      array_splice($targetJsonData, $key, 2, $replacedData);
+      return $targetJsonData;
+    }
   }
 
 
