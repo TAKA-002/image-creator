@@ -11,11 +11,13 @@
 
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="create">
+            <input type="hidden" name="opeDataFlag" value="nodata">
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規追加</button>
           </form>
 
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="nationalflag">
+            <input type="hidden" name="opeDataFlag" value="nodata">
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
           </form>
 
@@ -49,7 +51,7 @@
                 <!-- MOVE -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST" class="m-0 text-center leading-none" style="line-height: 7px;">
-                    <input type="hidden" name="moveFlag" value="up">
+                    <input type="hidden" name="opeDataFlag" value="up">
                     <input type="hidden" name="dispFlag" value="list">
                     <input type="hidden" name="key" value="<?php echo $key ?>">
                     <input type="hidden" name="id" value="<?php echo $listData["id"] ?>">
@@ -62,7 +64,7 @@
                   </form>
 
                   <form action="" method="POST" class="mt-4 mb-0 text-center" style="line-height: 7px;">
-                    <input type="hidden" name="moveFlag" value="down">
+                    <input type="hidden" name="opeDataFlag" value="down">
                     <input type="hidden" name="dispFlag" value="list">
                     <input type="hidden" name="key" value="<?php echo $key ?>">
                     <input type="hidden" name="id" value="<?php echo $listData["id"] ?>">

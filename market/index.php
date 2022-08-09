@@ -36,9 +36,12 @@ const EDIT_FLAG = "edit";
 const ADD_NATIONALFLAG_FLAG = "nationalflag";
 
 // DATAFLAG
+const DATA_NONE_FLAG = "nodata";
 const DATA_CREATE_FLAG = "created";
 const DATA_EDIT_FLAG = "edited";
 const DATA_DELETE_FLAG = "deleted";
+const DATA_MOVE_UP_FLAG = "up";
+const DATA_MOVE_DOWN_FLAG = "down";
 
 // $pageDir - sidebarでアクティブのページのときのcssに切り替えるために使用。
 $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
@@ -55,11 +58,11 @@ $flagsList = $dataObj->getFlagJsonData();
 // /////////////////////////////////////////////////////////////////////////
 
 /**
- * 新規作成
+ * 「新規追加」ボタンを押した場合
  */
-if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] !== DATA_CREATE_FLAG) {
+if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] !== DATA_NONE_FLAG) {
 
-  // IDを作成(IDの条件は他に存在しないIDであることなので、まずは現在のデータのIDを取得)
+  // IDを作成
   $createdId = $dataObj->createId($targetJsonData);
 }
 
@@ -78,8 +81,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_CREATE_FL
   // jsonデータを再読み込み
   $targetJsonData = $jsonData->getJsonData($path);
 
-  // opeDataFlagを空に
-  $_POST["opeDataFlag"] = "";
+  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
 }
 
 // /////////////////////////////////////////////////////////////////////////
@@ -97,8 +99,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_DELETE_FL
   // jsonデータを再読み込み
   $targetJsonData = $jsonData->getJsonData($path);
 
-  // opeDataFlagを空に
-  $_POST["opeDataFlag"] = "";
+  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
 }
 
 // /////////////////////////////////////////////////////////////////////////
@@ -127,13 +128,13 @@ if ($_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
   $targetJsonData = $jsonData->getJsonData($path);
 
   // opeDataFlagを空に
-  $_POST["opeDataFlag"] = "";
+  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
 }
 
 // 移動
-if ($_POST["dispFlag"] === LIST_FLAG && $_POST["moveFlag"] === "up" || $_POST["dispFlag"] === LIST_FLAG && $_POST["moveFlag"] === "down") {
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_FLAG || $_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_DOWN_FLAG) {
 
-  $result = $dataObj->moveData($_POST["key"], $_POST["moveFlag"], $targetJsonData);
+  $result = $dataObj->moveData($_POST["key"], $_POST["opeDataFlag"], $targetJsonData);
 
   $jsonData->updateJsonData($path, $result);
 
@@ -142,6 +143,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["moveFlag"] === "up" || $_POST["d
 
   $_POST = array();
   $_POST["dispFlag"] = LIST_FLAG;
+  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
 }
 
 ?>
