@@ -144,7 +144,7 @@ class Data
   public function deleteData($deleteItemId, $targetJsonData)
   {
 
-    foreach ($targetJsonData as $key => $valie) {
+    foreach ($targetJsonData as $key => $value) {
 
       if ($targetJsonData[$key]["id"] === $deleteItemId) {
         array_splice($targetJsonData, $key, 1);

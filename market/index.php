@@ -107,7 +107,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_DELETE_FL
 /**
  * 編集
  */
-if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== DATA_EDIT_FLAG) {
+if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FLAG) {
   $targetEditData["id"] = $_POST["id"];
   $targetEditData["date"] = $_POST["date"];
   $targetEditData["plan"] = $_POST["plan"];
@@ -117,7 +117,7 @@ if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] !== DATA_EDIT_FLAG
 }
 
 // 編集：編集画面からデータを取得した場合
-if ($_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
 
   $replacedData = $dataObj->replaceData($_POST, $targetJsonData);
 

@@ -9,8 +9,9 @@
         <h1 class="font-sanserif text-3xl font-bold">編集</h1>
         <div class="flex justify-start mt-10">
           <form action="" method="POST">
+            <input type="hidden" name="opeDataFlag" value="nodata">
             <input type="hidden" name="dispFlag" value="list">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>リストへ</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">リストへ</button>
           </form>
         </div>
       </div>
@@ -24,7 +25,7 @@
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="listDate">年月日（yyyymmdd形式）<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
-            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" value="<?php echo $targetEditData["date"] ?>" required />
+            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" value="<?php echo $targetEditData["date"] ?>" required autofocus />
           </div>
 
           <!-- 国旗 -->

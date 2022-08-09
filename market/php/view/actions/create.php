@@ -11,12 +11,12 @@
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="nationalflag">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">国旗追加</button>
           </form>
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="list">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>リスト表示</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">リスト表示</button>
           </form>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="listDate">年月日（yyyymmdd形式）<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
-            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" placeholder="予定項目の年月日を入力してください。（例：20220715）" required />
+            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" placeholder="予定項目の年月日を入力してください。（例：20220715）" required autofocus />
           </div>
 
           <!-- 国旗 -->

@@ -108,6 +108,7 @@
                 <!-- 編集 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST">
+                    <input type="hidden" name="opeDataFlag" value="nodata">
                     <input type="hidden" name="dispFlag" value="edit">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <input type="hidden" name="date" value="<?php echo $listData["date"]; ?>">
