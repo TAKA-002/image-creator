@@ -39,6 +39,7 @@ $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
                 <div class="shadow-lg rounded-2xl bg-white p-4 hover:opacity-75 transition ease-in duration-200 mb-4">
                   <form action="/image-creator/market/" method="POST">
                     <input type="hidden" name="dispFlag" value="list">
+                    <input type="hidden" name="opeDataFlag" value="none">
 
                     <button type="submit" class="px-3 flex-row flex items-center w-full">
                       <div class="flex-none flex-shrink-0 w-14">
@@ -66,6 +67,7 @@ $pageDir = $pageData->getPageDir($_SERVER["PHP_SELF"]);
                 <div class="shadow-lg rounded-2xl bg-white p-4 hover:opacity-75 transition ease-in duration-200 mb-4">
                   <form action="" method="POST">
                     <input type="hidden" name="dispFlag" value="list">
+                    <input type="hidden" name="opeDataFlag" value="none">
 
                     <button type="submit" class="px-3 flex-row flex items-center w-full">
                       <div class="flex-none flex-shrink-0 w-14">
