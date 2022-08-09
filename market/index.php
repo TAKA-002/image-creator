@@ -60,8 +60,7 @@ $flagsList = $dataObj->getFlagJsonData();
 /**
  * 「新規追加」ボタンを押した場合
  */
-if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] !== DATA_NONE_FLAG) {
-
+if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FLAG) {
   // IDを作成
   $createdId = $dataObj->createId($targetJsonData);
 }
