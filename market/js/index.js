@@ -31,7 +31,7 @@ $(function () {
 $(function () {
   $.ajax({
     type: "GET",
-    url: "/WEB-Feature-Image-Creator/data/data.json",
+    url: "./data/imageTableData.json",
     dataType: "json",
     async: false,
   })
@@ -51,85 +51,26 @@ function createTable(jsonObj) {
 }
 
 function createTableData(jsonObj) {
-  let aryData = [];
+  // listsFolderを入れるストレージのイメージ
+  let listsStrage = [];
+
+  // listsTxtを入れるフォルダーのようなイメージ
+  let listsFolder = [];
   let createdTags = "";
-  let row_1;
-  let row_2;
-  let row_3;
-  let row_4;
-  let row_5;
-  let row_6;
-  let row_7;
-  let row_8;
-  let row_9;
-  let row_10;
 
-  jsonObj.forEach((ary) => {
-    Object.keys(ary).forEach((item) => {
-      if (item == "row_1") {
-        row_1 = jsonObj[0][item];
-      }
-      if (item == "row_2") {
-        row_2 = jsonObj[0][item];
-      }
-      if (item == "row_3") {
-        row_3 = jsonObj[0][item];
-      }
-      if (item == "row_4") {
-        row_4 = jsonObj[0][item];
-      }
-      if (item == "row_5") {
-        row_5 = jsonObj[0][item];
-      }
-      if (item == "row_6") {
-        row_6 = jsonObj[0][item];
-      }
-      if (item == "row_7") {
-        row_7 = jsonObj[0][item];
-      }
-      if (item == "row_8") {
-        row_8 = jsonObj[0][item];
-      }
-      if (item == "row_9") {
-        row_9 = jsonObj[0][item];
-      }
-      if (item == "row_10") {
-        row_10 = jsonObj[0][item];
-      }
-    });
+  // リストのtagを作成する
+  Object.keys(jsonObj).forEach((key) => {
+    // timestampをまず配列0に格納
+    listsFolder.push(jsonObj[key]["timestamp"]);
+
+    // timestampに対応しているlistを作成して格納
+    let listsTxt = createTags(jsonObj[key]);
+    listsFolder.push(listsTxt);
+    console.log("listsFolder：", typeof listsFolder);
   });
+  // console.log(listsStrage);
 
-  if (row_1.isShow) {
-    aryData.push(row_1);
-  }
-  if (row_2.isShow) {
-    aryData.push(row_2);
-  }
-  if (row_3.isShow) {
-    aryData.push(row_3);
-  }
-  if (row_4.isShow) {
-    aryData.push(row_4);
-  }
-  if (row_5.isShow) {
-    aryData.push(row_5);
-  }
-  if (row_6.isShow) {
-    aryData.push(row_6);
-  }
-  if (row_7.isShow) {
-    aryData.push(row_7);
-  }
-  if (row_8.isShow) {
-    aryData.push(row_8);
-  }
-  if (row_9.isShow) {
-    aryData.push(row_9);
-  }
-  if (row_10.isShow) {
-    aryData.push(row_10);
-  }
-
+  return;
 
   aryData.forEach((each) => {
     let text = createTags(each);
@@ -157,7 +98,6 @@ function createList(data) {
   let lists = "";
 
   data.plansRow.forEach((item) => {
-
     // paintPartsデータが空じゃなかったらspanタグを挿入
     if (item.paintParts != "") {
       let span = setSpan(item);
@@ -168,15 +108,13 @@ function createList(data) {
       let list = `<li class="icon-${item.nationalFlag}">${item.plan}</li>`;
       lists += list;
     }
-
   });
 
   return lists;
 }
 
-
 function setSpan(item) {
-  let spanTxt = `<span style="color: ${item.colorCode}">${item.paintParts}</span>`
+  let spanTxt = `<span style="color: ${item.colorCode}">${item.paintParts}</span>`;
 
   return spanTxt;
 }
