@@ -11,12 +11,12 @@
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="create">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">新規追加</button>
           </form>
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="list">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>リスト表示</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">リスト表示</button>
           </form>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <div class="mt-8">
             <label class="form-label block text-sm font-bold text-gray-700" for="flagImgFile">ファイル<span class="text-pink-500 text-xs ml-3">必須</span></label>
             <div class="my-3 w-full">
-              <input class="form-control block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="flagImgFile" name="uploadFile" required>
+              <input class="form-control block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="flagImgFile" name="uploadFile" required autofocus>
             </div>
           </div>
 
