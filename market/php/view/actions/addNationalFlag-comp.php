@@ -8,15 +8,12 @@
  */
 
 require_once(__DIR__ . '/../../model/function/data.php');
+require_once(__DIR__ . '/../../model/function/flagFile.php');
 $dataObj = new Data();
+$flagFile = new FlagFile();
 
 // 今ある国旗のリストを作成
 $flagsList = $dataObj->getFlagJsonData();
-
-// echo '<pre>';
-// var_dump($_POST);
-// var_dump($_FILES["uploadFile"]);
-// echo '</pre>';
 
 // $_FILES['uploadFile]['name']のなかで、'.'があった場所から、最後までを返し、
 // substrでその１バイト後ろからの文字列を返す
@@ -43,28 +40,23 @@ foreach ($flagsList as $key => $value) {
   }
 }
 
-// 入力した国旗名が英字だけで入力されているか
+// validation：入力した国旗名が英字だけで入力されているか
 if (!preg_match('/^[a-zA-Z]+$/', $_POST["nationalFlagName"])) {
   $errorMsgs[] = "■ CSSクラス名・画像ファイル名：半角英字のみで入力してください。";
 }
 
-
-echo '<pre>';
-var_dump($errorMsgs);
-echo '</pre>';
-
-echo '<pre>';
-var_dump(count($errorMsgs));
-echo '</pre>';
-
-
-
-
+// 
 if (isset($_POST["upload"])) {
   $imgFileName = $_POST["nationalFlagName"];
 }
-?>
 
+////////////////////////////////////////////////////////////////////////////////////
+
+// validationチェックを通過。POSTデータのファイルサイズが0ではない（画像がある）
+if (count($errorMsgs) === "0" && $_FILES["uploadFile"]["size"] !== 0) {
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
