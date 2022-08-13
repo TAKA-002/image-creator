@@ -42,7 +42,7 @@
           <div class="mt-8">
             <label class="form-label block text-sm font-bold text-gray-700" for="flagImgFile">ファイル<span class="text-pink-500 text-xs ml-3">必須</span></label>
             <div class="my-3 w-full">
-              <input class="form-control block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="flagImgFile" name="flag">
+              <input class="form-control block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="flagImgFile" name="uploadFile">
             </div>
           </div>
 
