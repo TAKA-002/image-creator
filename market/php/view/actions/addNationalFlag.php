@@ -24,11 +24,18 @@
       <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
         <form action="./php/view/actions/addNationalFlag-comp.php" method="POST" enctype="multipart/form-data">
 
-          <!-- テキスト -->
+          <!-- 国名 -->
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="flagName">国名<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="countryName">国名<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
-            <input id="flagName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="nationalFlagName" placeholder="国旗の略名を半角英字で入力してください。（例 アメリカ合衆国：US）" required />
+            <input id="countryName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="countryName" placeholder="国旗の国名を入力してください。（例 アメリカ）" required />
+          </div>
+
+          <!-- ファイル名 -->
+          <div class="mt-8">
+            <label class="block text-sm font-bold text-gray-700" for="flagName">CSSクラス名・画像ファイル名<span class="text-pink-500 text-xs ml-3">必須</span></label>
+
+            <input id="flagName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="nationalFlagName" placeholder="国旗の略名を半角英字で入力してください。（例 US）" required />
           </div>
 
           <!-- File -->
