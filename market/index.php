@@ -3,7 +3,6 @@
 /**
  * < プラン >
  * data.jsonからデータは取得して、それをテーブルに表示。その表示されたデータが編集されたらdata.jsonの内容を更新していく。
- * 理想はその場編集。
  * 最後に、編集が終わったら、data.jsonを元に、画像データを表示するためのimageTableData.jsonファイルを生成するようにする。
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
@@ -167,7 +166,6 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   <main class="bg-gray-100 rounded-2xl relative w-min pr-4">
     <div class="flex">
       <div class="my-4 ml-4 shadow-lg relative" style="width: 320px;">
-        <!-- サイドバー => use $pageDir -->
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 
