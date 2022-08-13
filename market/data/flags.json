@@ -7,61 +7,61 @@
   {
     "name": "US",
     "display": "アメリカ",
-    "img": "../image/flags/US.png"
+    "img": "/image-creator/market/image/flags/US.png"
   },
   {
     "name": "CN",
     "display": "中国",
-    "img": "../image/flags/CN.png"
+    "img": "/image-creator/market/image/flags/CN.png"
   },
   {
     "name": "JP",
     "display": "日本",
-    "img": "../image/flags/JP.png"
+    "img": "/image-creator/market/image/flags/JP.png"
   },
   {
     "name": "EU",
     "display": "ユーロ",
-    "img": "../image/flags/EU.png"
+    "img": "/image-creator/market/image/flags/EU.png"
   },
   {
     "name": "GB",
     "display": "イギリス",
-    "img": "../image/flags/GB.png"
+    "img": "/image-creator/market/image/flags/GB.png"
   },
   {
     "name": "GER",
     "display": "ドイツ",
-    "img": "../image/flags/GER.png"
+    "img": "/image-creator/market/image/flags/GER.png"
   },
   {
     "name": "KO",
     "display": "韓国",
-    "img": "../image/flags/KO.png"
+    "img": "/image-creator/market/image/flags/KO.png"
   },
   {
     "name": "FR",
     "display": "フランス",
-    "img": "../image/flags/FR.png"
+    "img": "/image-creator/market/image/flags/FR.png"
   },
   {
     "name": "AUS",
     "display": "オーストラリア",
-    "img": "../image/flags/AUS.png"
+    "img": "/image-creator/market/image/flags/AUS.png"
   },
   {
     "name": "BR",
     "display": "ブラジル",
-    "img": "../image/flags/BR.png"
+    "img": "/image-creator/market/image/flags/BR.png"
   },
   {
     "name": "SW",
     "display": "スイス",
-    "img": "../image/flags/SW.png"
+    "img": "/image-creator/market/image/flags/SW.jpg"
   },
   {
     "name": "NZ",
     "display": "ニュージーランド",
-    "img": "../image/flags/NZ.png"
+    "img": "/image-creator/market/image/flags/NZ.png"
   }
 ]
