@@ -1,67 +1,63 @@
 [
-  {
-    "name": "NNF",
-    "display": "なし",
-    "img": ""
-  },
+  { "name": "NNF", "display": "\u306a\u3057", "img": "" },
   {
     "name": "US",
-    "display": "アメリカ",
-    "img": "../image/flags/US.png"
+    "display": "\u30a2\u30e1\u30ea\u30ab",
+    "img": "/image-creator/market/image/flags/US.png"
   },
   {
     "name": "CN",
-    "display": "中国",
-    "img": "../image/flags/CN.png"
+    "display": "\u4e2d\u56fd",
+    "img": "/image-creator/market/image/flags/CN.png"
   },
   {
     "name": "JP",
-    "display": "日本",
-    "img": "../image/flags/JP.png"
+    "display": "\u65e5\u672c",
+    "img": "/image-creator/market/image/flags/JP.png"
   },
   {
     "name": "EU",
-    "display": "ユーロ",
-    "img": "../image/flags/EU.png"
+    "display": "\u30e6\u30fc\u30ed",
+    "img": "/image-creator/market/image/flags/EU.png"
   },
   {
     "name": "GB",
-    "display": "イギリス",
-    "img": "../image/flags/GB.png"
+    "display": "\u30a4\u30ae\u30ea\u30b9",
+    "img": "/image-creator/market/image/flags/GB.png"
   },
   {
     "name": "GER",
-    "display": "ドイツ",
-    "img": "../image/flags/GER.png"
+    "display": "\u30c9\u30a4\u30c4",
+    "img": "/image-creator/market/image/flags/GER.png"
   },
   {
     "name": "KO",
-    "display": "韓国",
-    "img": "../image/flags/KO.png"
+    "display": "\u97d3\u56fd",
+    "img": "/image-creator/market/image/flags/KO.png"
   },
   {
     "name": "FR",
-    "display": "フランス",
-    "img": "../image/flags/FR.png"
+    "display": "\u30d5\u30e9\u30f3\u30b9",
+    "img": "/image-creator/market/image/flags/FR.png"
   },
   {
     "name": "AUS",
-    "display": "オーストラリア",
-    "img": "../image/flags/AUS.png"
+    "display": "\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2",
+    "img": "/image-creator/market/image/flags/AUS.png"
   },
   {
     "name": "BR",
-    "display": "ブラジル",
-    "img": "../image/flags/BR.png"
+    "display": "\u30d6\u30e9\u30b8\u30eb",
+    "img": "/image-creator/market/image/flags/BR.png"
   },
   {
     "name": "SW",
-    "display": "スイス",
-    "img": "../image/flags/SW.png"
+    "display": "\u30b9\u30a4\u30b9",
+    "img": "/image-creator/market/image/flags/SW.jpg"
   },
   {
     "name": "NZ",
-    "display": "ニュージーランド",
-    "img": "../image/flags/NZ.png"
+    "display": "\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9",
+    "img": "/image-creator/market/image/flags/NZ.png"
   }
 ]

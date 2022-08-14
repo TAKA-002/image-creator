@@ -18,7 +18,7 @@
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="nationalflag">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>国旗追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">国旗追加</button>
           </form>
 
           <form action="" method="POST">

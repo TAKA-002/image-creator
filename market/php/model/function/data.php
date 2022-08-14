@@ -70,32 +70,6 @@ class Data
     return $ids;
   }
 
-
-  //////////////////////////////////////////////////////////////////////////////////////
-
-  /**
-   * 現在登録されている国旗データを取得する
-   *
-   * @return
-   */
-  public function getFlagJsonData()
-  {
-    $path =  $this->getFlagDataPath();
-    $file = file_get_contents($path);
-    $json = mb_convert_encoding($file, "UTF8", 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-    $jsonData = json_decode($json, true);
-    return $jsonData;
-  }
-
-
-  /**
-   * 現在使われているflag.jsonファイルのパスを取得する
-   */
-  private function getFlagDataPath()
-  {
-    return dirname(__DIR__, 3) . "/data/flags.json";
-  }
-
   //////////////////////////////////////////////////////////////////////////////////////
 
   /**
@@ -203,14 +177,5 @@ class Data
       array_splice($targetJsonData, $key, 2, $replacedData);
       return $targetJsonData;
     }
-  }
-
-
-  /**
-   * 現在使われているflags.cssファイルのパスを取得する（cssファイルを生成するときに使う）
-   */
-  private function getCssDataPath()
-  {
-    return dirname(__DIR__, 3) . "/css/flags.css";
   }
 }
