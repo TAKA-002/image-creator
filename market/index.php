@@ -168,6 +168,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   <link rel="stylesheet" href="/image-creator/common/vendor/tailwind/tailwind.css">
 
   <script src="/image-creator/common/vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="./js/yotei/list.js"></script>
   <script src="./js/index.js"></script>
 </head>
 
