@@ -7,12 +7,6 @@
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
  *
- * < 追加機能 メモ >
- * ・国旗追加機能
- * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
- * flag.cssファイルを更新するようにするということ。
- * images/flagsの中に画像もリネームして格納できるようにする。
- *
  * ・スーパーリロードボタン
  * 意外とかんたんっぽい。
  */
@@ -24,11 +18,13 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 // market内
 require_once(__DIR__ . '/php/model/function/data.php');
 require_once(__DIR__ . '/php/model/function/flagFile.php');
+require_once(__DIR__ . '/php/model/function/imgTableData.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
 $dataObj = new Data();
 $flagfileObj = new FlagFile();
+$imgTableObj = new ImgTable();
 
 // DISPFLAG
 const LIST_FLAG = "list";
@@ -55,6 +51,17 @@ $targetJsonData = $jsonData->getJsonData($path);
 
 // 今ある国旗のリストを作成し、表示するため
 $flagsList = $flagfileObj->getFlagJsonData();
+
+// /////////////////////////////////////////////////////////////////////////
+
+/**
+ * 「画像用JSON作成」ボタンを押した場合
+ */
+
+// jsonデータを取得する
+// $imgTableJson = $imgTableObj->getJsonData();
+
+
 
 // /////////////////////////////////////////////////////////////////////////
 
