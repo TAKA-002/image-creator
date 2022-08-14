@@ -69,8 +69,9 @@ if (count($errorMsgs) === 0) {
   $flagfileObj->updateFlagData($_POST, $flagImgName);
 
   /**
-   * CSSふぁいるにクラスを追加
+   * CSSファイルにクラスを追加
    */
+  $flagFile->updateFlagCss($_POST["nationalFlagName"]);
 }
 
 ?>

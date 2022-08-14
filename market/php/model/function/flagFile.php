@@ -2,7 +2,6 @@
 
 class FlagFile
 {
-
   /**
    * 現在使われているflags.cssファイルのパスを取得する（cssファイルを生成するときに使う）
    */
@@ -12,6 +11,37 @@ class FlagFile
   }
 
 
+  private function prepareAddCssClass($class)
+  {
+    $temp = <<<EOT
+    .icon-{$class}::before {
+      background-image: url(/image-creator/market/image/flags/{$class}.png);
+    }
+    EOT;
+
+    return $temp;
+  }
+
+  /**
+   * flags.cssファイルを更新する
+   */
+  public function updateFlagCss($className)
+  {
+    $cssPath = $this->getCssDataPath();
+
+    // flag.cssを取得
+    $res = file_get_contents($cssPath, true);
+
+    // 追加スタイルを準備
+    $newClass = $this->prepareAddCssClass($className);
+
+    $handle = fopen($this->getCssDataPath(), "a+");
+    fwrite($handle, $newClass);
+    fclose($handle);
+
+    return;
+  }
+
   /**
    * 画像ファイルをリネーム
    */
@@ -19,8 +49,6 @@ class FlagFile
   {
     return $inputName . $extension;
   }
-
-  //////////////////////////////////////////////////////////////////////////////////////
 
   /**
    * 現在登録されている国旗データを取得する
