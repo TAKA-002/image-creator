@@ -23,10 +23,12 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 
 // market内
 require_once(__DIR__ . '/php/model/function/data.php');
+require_once(__DIR__ . '/php/model/function/flagFile.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
 $dataObj = new Data();
+$flagfileObj = new FlagFile();
 
 // DISPFLAG
 const LIST_FLAG = "list";
@@ -52,7 +54,7 @@ $path = $jsonData->getJsonDataPath($pageDir);
 $targetJsonData = $jsonData->getJsonData($path);
 
 // 今ある国旗のリストを作成し、表示するため
-$flagsList = $dataObj->getFlagJsonData();
+$flagsList = $flagfileObj->getFlagJsonData();
 
 // /////////////////////////////////////////////////////////////////////////
 

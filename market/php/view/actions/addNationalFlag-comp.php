@@ -9,9 +9,10 @@
 require_once(__DIR__ . '/../../model/function/data.php');
 require_once(__DIR__ . '/../../model/function/flagFile.php');
 $dataObj = new Data();
+$flagfileObj = new FlagFile();
 
 // 今ある国旗のリストを作成
-$flagsList = $dataObj->getFlagJsonData();
+$flagsList = $flagfileObj->getFlagJsonData();
 
 // $_FILES['uploadFile]['name']のなかで、'.'があった場所から、最後までを返し、
 // substrでその１バイト後ろからの文字列を返す
@@ -65,7 +66,7 @@ if (count($errorMsgs) === 0) {
   /**
    * flags.jsonを更新
    */
-  $dataObj->updateFlagData($_POST, $flagImgName);
+  $flagfileObj->updateFlagData($_POST, $flagImgName);
 
   /**
    * CSSふぁいるにクラスを追加
