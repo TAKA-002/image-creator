@@ -1,1 +1,63 @@
-[{"name":"NNF","display":"\u306a\u3057","img":""},{"name":"US","display":"\u30a2\u30e1\u30ea\u30ab","img":"\/image-creator\/market\/image\/flags\/US.png"},{"name":"CN","display":"\u4e2d\u56fd","img":"\/image-creator\/market\/image\/flags\/CN.png"},{"name":"JP","display":"\u65e5\u672c","img":"\/image-creator\/market\/image\/flags\/JP.png"},{"name":"EU","display":"\u30e6\u30fc\u30ed","img":"\/image-creator\/market\/image\/flags\/EU.png"},{"name":"GB","display":"\u30a4\u30ae\u30ea\u30b9","img":"\/image-creator\/market\/image\/flags\/GB.png"},{"name":"GER","display":"\u30c9\u30a4\u30c4","img":"\/image-creator\/market\/image\/flags\/GER.png"},{"name":"KO","display":"\u97d3\u56fd","img":"\/image-creator\/market\/image\/flags\/KO.png"},{"name":"FR","display":"\u30d5\u30e9\u30f3\u30b9","img":"\/image-creator\/market\/image\/flags\/FR.png"},{"name":"AUS","display":"\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2","img":"\/image-creator\/market\/image\/flags\/AUS.png"},{"name":"BR","display":"\u30d6\u30e9\u30b8\u30eb","img":"\/image-creator\/market\/image\/flags\/BR.png"},{"name":"SW","display":"\u30b9\u30a4\u30b9","img":"\/image-creator\/market\/image\/flags\/SW.jpg"},{"name":"NZ","display":"\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9","img":"\/image-creator\/market\/image\/flags\/NZ.png"},{"name":"CSS","display":"\u3059\u305f\u3044\u308b","img":"\/image-creator\/market\/image\/flags\/CSS.png"}]
+[
+  { "name": "NNF", "display": "\u306a\u3057", "img": "" },
+  {
+    "name": "US",
+    "display": "\u30a2\u30e1\u30ea\u30ab",
+    "img": "/image-creator/market/image/flags/US.png"
+  },
+  {
+    "name": "CN",
+    "display": "\u4e2d\u56fd",
+    "img": "/image-creator/market/image/flags/CN.png"
+  },
+  {
+    "name": "JP",
+    "display": "\u65e5\u672c",
+    "img": "/image-creator/market/image/flags/JP.png"
+  },
+  {
+    "name": "EU",
+    "display": "\u30e6\u30fc\u30ed",
+    "img": "/image-creator/market/image/flags/EU.png"
+  },
+  {
+    "name": "GB",
+    "display": "\u30a4\u30ae\u30ea\u30b9",
+    "img": "/image-creator/market/image/flags/GB.png"
+  },
+  {
+    "name": "GER",
+    "display": "\u30c9\u30a4\u30c4",
+    "img": "/image-creator/market/image/flags/GER.png"
+  },
+  {
+    "name": "KO",
+    "display": "\u97d3\u56fd",
+    "img": "/image-creator/market/image/flags/KO.png"
+  },
+  {
+    "name": "FR",
+    "display": "\u30d5\u30e9\u30f3\u30b9",
+    "img": "/image-creator/market/image/flags/FR.png"
+  },
+  {
+    "name": "AUS",
+    "display": "\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2",
+    "img": "/image-creator/market/image/flags/AUS.png"
+  },
+  {
+    "name": "BR",
+    "display": "\u30d6\u30e9\u30b8\u30eb",
+    "img": "/image-creator/market/image/flags/BR.png"
+  },
+  {
+    "name": "SW",
+    "display": "\u30b9\u30a4\u30b9",
+    "img": "/image-creator/market/image/flags/SW.jpg"
+  },
+  {
+    "name": "NZ",
+    "display": "\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9",
+    "img": "/image-creator/market/image/flags/NZ.png"
+  }
+]
