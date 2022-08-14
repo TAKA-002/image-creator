@@ -6,11 +6,9 @@
  * cssファイルに追加された画像用のCSSを追加。
  * flags.jsonにブロックを追加。
  */
-
 require_once(__DIR__ . '/../../model/function/data.php');
 require_once(__DIR__ . '/../../model/function/flagFile.php');
 $dataObj = new Data();
-$flagFile = new FlagFile();
 
 // 今ある国旗のリストを作成
 $flagsList = $dataObj->getFlagJsonData();
@@ -45,15 +43,33 @@ if (!preg_match('/^[a-zA-Z]+$/', $_POST["nationalFlagName"])) {
   $errorMsgs[] = "■ CSSクラス名・画像ファイル名：半角英字のみで入力してください。";
 }
 
-// 
-if (isset($_POST["upload"])) {
-  $imgFileName = $_POST["nationalFlagName"];
-}
-
 ////////////////////////////////////////////////////////////////////////////////////
 
-// validationチェックを通過。POSTデータのファイルサイズが0ではない（画像がある）
-if (count($errorMsgs) === "0" && $_FILES["uploadFile"]["size"] !== 0) {
+// validationチェックを通過。
+if (count($errorMsgs) === 0) {
+  $flagFile = new FlagFile();
+
+  /**
+   * 画像を格納
+   */
+
+  // 画像保存先ディレクトリ
+  $flagImgDir = dirname(__DIR__, 3) . "/image/flags/";
+
+  // 画像ファイルリネーム
+  $flagImgName = $flagFile->renameImgFile($_POST["nationalFlagName"], strrchr($_FILES['uploadFile']['name'], '.'));
+
+  // 画像ファイルを格納
+  move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $flagImgDir . $flagImgName);
+
+  /**
+   * flags.jsonを更新
+   */
+  $dataObj->updateFlagData($_POST, $flagImgName);
+
+  /**
+   * CSSふぁいるにクラスを追加
+   */
 }
 
 ?>
