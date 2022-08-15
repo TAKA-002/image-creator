@@ -7,12 +7,6 @@
  * imageTableData.jsonファイルを読み込むことで、画像の部分を表示するようにする。
  * あとは、html2canvasライブラリで、ダウンロードできるようにする。
  *
- * < 追加機能 メモ >
- * ・国旗追加機能
- * 指定サイズの国旗の画像を追加し、割り当てるクラス名を指定したら追加できるようにする。
- * flag.cssファイルを更新するようにするということ。
- * images/flagsの中に画像もリネームして格納できるようにする。
- *
  * ・スーパーリロードボタン
  * 意外とかんたんっぽい。
  */
@@ -65,7 +59,6 @@ if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FL
   // IDを作成
   $createdId = $dataObj->createId($targetJsonData);
 }
-
 
 /**
  * 新規作成：新規データがPOSTで送られてきた場合
@@ -161,6 +154,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   <link rel="stylesheet" href="/image-creator/common/vendor/tailwind/tailwind.css">
 
   <script src="/image-creator/common/vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="./js/yotei/list.js"></script>
   <script src="./js/index.js"></script>
 </head>
 
@@ -180,28 +174,22 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
           <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
             <div class="flex flex-row flex-nowrap mt-8 pb-16 w-max">
 
-              <!-- データ操作テーブルエリア => use $targetJsonData -->
               <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/partial/list.php"); ?>
 
-                <!-- 新規作成画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/create.php"); ?>
 
-                <!-- 編集画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === EDIT_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/edit.php"); ?>
 
-                <!-- 国旗追加画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === ADD_NATIONALFLAG_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/addNationalFlag.php"); ?>
 
-                <!-- それ以外はエラーページへ -->
               <?php else : ?>
                 <?php include(dirname(__FILE__) . "/php/view/partial/error.php"); ?>
               <?php endif; ?>
 
-              <!-- 画像になる部分 -->
               <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
 
             </div>

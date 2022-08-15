@@ -4,7 +4,6 @@
 
     <div class="mx-auto mt-8">
 
-      <!-- 見出し・操作ボタン -->
       <div class="mb-4">
         <h1 class="font-sanserif text-3xl font-bold">リスト</h1>
         <div class="flex justify-start mt-10">
@@ -21,13 +20,15 @@
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">国旗追加</button>
           </form>
 
-          <form action="" method="POST">
+          <!-- 
+          <form action="./php/view/actions/transformData.php" method="POST">
+            <input type="hidden" name="opeDataFlag" value="transform">
             <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">画像用JSON作成</button>
           </form>
+          -->
         </div>
       </div>
 
-      <!-- データテーブル -->
       <div class="overflow-x-scroll">
         <table class="table-fixed w-full">
           <thead>
@@ -45,10 +46,8 @@
           <tbody class="bg-white">
             <?php foreach ($targetJsonData as $key => $listData) : ?>
               <tr>
-                <!-- ID -->
                 <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
 
-                <!-- MOVE -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST" class="m-0 text-center leading-none" style="line-height: 7px;">
                     <input type="hidden" name="opeDataFlag" value="up">
@@ -77,12 +76,10 @@
                   </form>
                 </td>
 
-                <!-- 年月日 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900"><?php echo $listData["date"]; ?></div>
                 </td>
 
-                <!-- 国旗 -->
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="flex items-center text-sm leading-5 text-gray-900">
                     <span style="width:40px; height:30px;" class="icon icon-<?php echo $listData["nationalFlag"] ?>"></span>
@@ -90,22 +87,18 @@
                   </div>
                 </td>
 
-                <!-- テキスト -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900"><?php echo $listData["plan"] ?></div>
                 </td>
 
-                <!-- 色付け部分 -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900"><?php echo $listData["paintParts"] ?></div>
                 </td>
 
-                <!-- カラー -->
                 <td class="px-3 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div class="text-sm leading-5 text-gray-900"><?php echo $listData["colorCode"] ?></div>
                 </td>
 
-                <!-- 編集 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST">
                     <input type="hidden" name="opeDataFlag" value="nodata">
@@ -125,7 +118,6 @@
                   </form>
                 </td>
 
-                <!-- 削除 -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200">
                   <form action="" method="POST">
                     <input type="hidden" name="dispFlag" value="list">

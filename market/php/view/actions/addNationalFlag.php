@@ -4,7 +4,6 @@
 
     <div class="w-1/2 mx-auto mt-8">
 
-      <!-- 見出し・操作ボタン -->
       <div class="mb-4">
         <h1 class="font-sanserif text-3xl font-bold">国旗追加</h1>
         <div class="flex justify-start mt-10">
@@ -23,7 +22,7 @@
 
       <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
         <form action="./php/view/actions/addNationalFlag-comp.php" method="POST" enctype="multipart/form-data">
-          <!-- File -->
+
           <div class="mt-8">
             <label class="form-label block text-sm font-bold text-gray-700" for="flagImgFile">ファイル<span class="text-pink-500 text-xs ml-3">必須</span></label>
             <div class="my-3 w-full">
@@ -31,21 +30,18 @@
             </div>
           </div>
 
-          <!-- ファイル名 -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="flagName">CSSクラス名・画像ファイル名<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
             <input id="flagName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="nationalFlagName" placeholder="国旗の略名を半角英字で入力してください。（例 US）" required />
           </div>
 
-          <!-- 国名 -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="countryName">国名<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
             <input id="countryName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="countryName" placeholder="国旗の国名を入力してください。（例 アメリカ）" required />
           </div>
 
-          <!-- BUTTON -->
           <div class="flex items-center justify-start mt-8 gap-x-2">
             <button type="submit" name="upload" value="追加" class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-sky-500 hover:bg-sky-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">追加</button>
           </div>

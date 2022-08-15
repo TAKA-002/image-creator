@@ -70,7 +70,7 @@
           position: relative;
           font-size: 19px;
           line-height: 28px;
-          padding:0 0 0 42px;
+          padding: 0 0 0 42px;
 
           // 国旗の画像の追加については、「flags.css」に記述
           &::before {
@@ -83,12 +83,10 @@
             top: 3px;
           }
 
-
-          /* フラッグなし（国関係ない項目の場合であり、同じ国が連続する場合ではない。） */
-          &.icon-NNF{
-            padding-left: 0;
+          /* フラッグなし（同じ国が連続する場合などにつかう） */
+          &.icon-NNF {
+            // padding-left: 0;
           }
-
         }
       }
     }
