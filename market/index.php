@@ -155,6 +155,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
 
   <!-- vendor -->
   <script src="/image-creator/common/vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="/image-creator/common/vendor/html2capture/html2capture.js"></script>
 
   <!-- local -->
   <script src="./js/yotei/list.js"></script>
@@ -202,7 +203,6 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   </main>
 </body>
 
-<script src="/image-creator/common/vendor/html2capture/html2capture.js"></script>
 <script src="./js/yotei/html2capture_conf.js"></script>
 
 </html>

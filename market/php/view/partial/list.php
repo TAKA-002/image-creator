@@ -20,8 +20,8 @@
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">国旗追加</button>
           </form>
 
-          <button class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75" id="outImage" type="button">Download（不調）</button>
-          <a id="download" href="#"></a>
+          <!-- <button class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75" id="outImage" type="button">Download（不調）</button>
+          <a id="download" href="#"></a> -->
 
           <!-- 
           <form action="./php/view/actions/transformData.php" method="POST">
