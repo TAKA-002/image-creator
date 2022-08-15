@@ -174,28 +174,22 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
           <div class="flex flex-row flex-nowrap mt-8 pb-16 w-screen">
             <div class="flex flex-row flex-nowrap mt-8 pb-16 w-max">
 
-              <!-- データ操作テーブルエリア => use $targetJsonData -->
               <?php if ($_POST["dispFlag"] === LIST_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/partial/list.php"); ?>
 
-                <!-- 新規作成画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === CREATE_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/create.php"); ?>
 
-                <!-- 編集画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === EDIT_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/edit.php"); ?>
 
-                <!-- 国旗追加画面と差し替える -->
               <?php elseif ($_POST["dispFlag"] === ADD_NATIONALFLAG_FLAG) : ?>
                 <?php include(dirname(__FILE__) . "/php/view/actions/addNationalFlag.php"); ?>
 
-                <!-- それ以外はエラーページへ -->
               <?php else : ?>
                 <?php include(dirname(__FILE__) . "/php/view/partial/error.php"); ?>
               <?php endif; ?>
 
-              <!-- 画像になる部分 -->
               <?php include(dirname(__FILE__) . "/php/view/partial/imageTable.php"); ?>
 
             </div>

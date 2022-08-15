@@ -4,7 +4,6 @@
 
     <div class="mx-auto mt-8">
 
-      <!-- 見出し・操作ボタン -->
       <div class="mb-4">
         <h1 class="font-sanserif text-3xl font-bold">新規追加</h1>
         <div class="flex justify-start mt-10">
@@ -26,17 +25,14 @@
           <input type="hidden" name="dispFlag" value="list">
           <input type="hidden" name="opeDataFlag" value="created">
 
-          <!-- ID -->
           <input class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="listid" type="hidden" name="id" value="<?php echo $createdId; ?>" />
 
-          <!-- 年月日 -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="listDate">年月日（yyyymmdd形式）<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
             <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" placeholder="予定項目の年月日を入力してください。（例：20220715）" required autofocus />
           </div>
 
-          <!-- 国旗 -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="nationalFlag">国旗</label>
 
@@ -47,29 +43,24 @@
             </select>
           </div>
 
-          <!-- テキスト -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="plan">テキスト<span class="text-pink-500 text-xs ml-3">必須</span></label>
 
             <input id="plan" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="plan" placeholder="注目予定テキストを入力してください。（例：FOMC FRBパウエル議長会見）" required />
           </div>
 
-          <!-- 色付け部分 -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="paintParts">色付け部分</label>
 
             <input id="paintParts" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="paintParts" placeholder="予定文の中で色をつけたい箇所を記入してください。（例：パウエル）" />
           </div>
 
-          <!-- カラー -->
           <div class="mt-8">
             <label class="block text-sm font-bold text-gray-700" for="colorCode">カラー</label>
 
             <input id="colorCode" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="colorCode" placeholder="色を付けたい部分のカラーを入力してください。（例：red, #fff）" />
           </div>
 
-
-          <!-- BUTTON -->
           <div class="flex items-center justify-start mt-8 gap-x-2">
             <button type="submit" class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-sky-500 hover:bg-sky-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">データ作成・追加</button>
           </div>
