@@ -80,10 +80,8 @@ function createPlanListTag(eachData) {
  * @param {*} item
  * @returns
  */
-function setSpanz(item) {
-  let spanTxt = `<span style="color: ${item.colorCode}">${item.paintParts}</span>`;
-
-  return spanTxt;
+function setSpan(eachData) {
+  return `<span style="color: ${eachData.colorCode}">${eachData.paintParts}</span>`;
 }
 
 /**
