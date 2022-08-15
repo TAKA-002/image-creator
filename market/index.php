@@ -153,7 +153,10 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   <link rel="stylesheet" href="/image-creator/market/css/flags.css">
   <link rel="stylesheet" href="/image-creator/common/vendor/tailwind/tailwind.css">
 
+  <!-- vendor -->
   <script src="/image-creator/common/vendor/jquery/jquery-3.6.0.min.js"></script>
+
+  <!-- local -->
   <script src="./js/yotei/list.js"></script>
   <script src="./js/index.js"></script>
 </head>
@@ -198,5 +201,8 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
       </div>
   </main>
 </body>
+
+<script src="/image-creator/common/vendor/html2capture/html2capture.js"></script>
+<script src="./js/yotei/html2capture_conf.js"></script>
 
 </html>
