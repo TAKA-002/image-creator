@@ -18,13 +18,11 @@ require_once(__DIR__ . '/../php/model/function/jsonData.php');
 // market内
 require_once(__DIR__ . '/php/model/function/data.php');
 require_once(__DIR__ . '/php/model/function/flagFile.php');
-require_once(__DIR__ . '/php/model/function/imgTableData.php');
 
 $pageData = new pageData();
 $jsonData = new JsonData();
 $dataObj = new Data();
 $flagfileObj = new FlagFile();
-$imgTableObj = new ImgTable();
 
 // DISPFLAG
 const LIST_FLAG = "list";
@@ -55,24 +53,12 @@ $flagsList = $flagfileObj->getFlagJsonData();
 // /////////////////////////////////////////////////////////////////////////
 
 /**
- * 「画像用JSON作成」ボタンを押した場合
- */
-
-// jsonデータを取得する
-// $imgTableJson = $imgTableObj->getJsonData();
-
-
-
-// /////////////////////////////////////////////////////////////////////////
-
-/**
  * 「新規追加」ボタンを押した場合
  */
 if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FLAG) {
   // IDを作成
   $createdId = $dataObj->createId($targetJsonData);
 }
-
 
 /**
  * 新規作成：新規データがPOSTで送られてきた場合
