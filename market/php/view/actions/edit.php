@@ -5,7 +5,7 @@
     <div class="mx-auto mt-8">
 
       <div class="mb-4">
-        <h1 class="font-sanserif text-3xl font-bold">編集</h1>
+        <h1 class="font-sanserif text-3xl font-bold">予定編集</h1>
         <div class="flex justify-start mt-10">
           <form action="" method="POST">
             <input type="hidden" name="opeDataFlag" value="nodata">
@@ -17,6 +17,7 @@
 
       <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
         <form action="" method="POST">
+          <input name="chkno" type="hidden" value="<?php echo $chkno; ?>">
 
           <input class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="listid" type="hidden" name="id" value="<?php echo $targetEditData["id"]; ?>" />
 
@@ -47,7 +48,7 @@
           </div>
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="listURL">色付け部分</label>
+            <label class="block text-sm font-bold text-gray-700" for="listURL">着色テキスト</label>
 
             <input id="listURL" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="paintParts" value="<?php echo $targetEditData["paintParts"] ?>" />
           </div>

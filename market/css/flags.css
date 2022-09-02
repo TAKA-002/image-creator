@@ -8,34 +8,61 @@
 }
 .icon-US::before {
   background-image: url(/image-creator/market/image/flags/US.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-CN::before {
   background-image: url(/image-creator/market/image/flags/CN.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-JP::before {
   background-image: url(/image-creator/market/image/flags/JP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-EU::before {
   background-image: url(/image-creator/market/image/flags/EU.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-GB::before {
   background-image: url(/image-creator/market/image/flags/GB.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-GER::before {
   background-image: url(/image-creator/market/image/flags/GER.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-KO::before {
   background-image: url(/image-creator/market/image/flags/KO.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-FR::before {
   background-image: url(/image-creator/market/image/flags/FR.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-AUS::before {
   background-image: url(/image-creator/market/image/flags/AUS.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-BR::before {
   background-image: url(/image-creator/market/image/flags/BR.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .icon-NZ::before {
   background-image: url(/image-creator/market/image/flags/NZ.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon-UKR::before {
+  background-image: url(/image-creator/market/image/flags/UKR.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

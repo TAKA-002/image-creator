@@ -11,11 +11,13 @@ class FlagFile
   }
 
 
-  private function prepareAddCssClass($class)
+  private function prepareAddCssClass($class, $extension)
   {
     $temp = <<<EOT
     .icon-{$class}::before {
-      background-image: url(/image-creator/market/image/flags/{$class}.png);
+      background-image: url(/image-creator/market/image/flags/{$class}.{$extension});
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     EOT;
 
@@ -25,7 +27,7 @@ class FlagFile
   /**
    * flags.cssファイルを更新する
    */
-  public function updateFlagCss($className)
+  public function updateFlagCss($className, $extension)
   {
     $cssPath = $this->getCssDataPath();
 
@@ -33,7 +35,7 @@ class FlagFile
     $res = file_get_contents($cssPath, true);
 
     // 追加スタイルを準備
-    $newClass = $this->prepareAddCssClass($className);
+    $newClass = $this->prepareAddCssClass($className, $extension);
 
     $handle = fopen($this->getCssDataPath(), "a+");
     fwrite($handle, $newClass);
@@ -73,9 +75,9 @@ class FlagFile
   }
 
   /**
-   * 
+   *
    * 入力値を変換してデータを追加
-   * 
+   *
    * {
    * "name": "US",
    * "display": "アメリカ",

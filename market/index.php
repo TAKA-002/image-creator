@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /**
  * < プラン >
@@ -35,6 +36,7 @@ const DATA_NONE_FLAG = "nodata";
 const DATA_CREATE_FLAG = "created";
 const DATA_EDIT_FLAG = "edited";
 const DATA_DELETE_FLAG = "deleted";
+const DATA_ALL_DELETE_FLAG = "allDelete";
 const DATA_MOVE_UP_FLAG = "up";
 const DATA_MOVE_DOWN_FLAG = "down";
 
@@ -65,16 +67,17 @@ if ($_POST["dispFlag"] === CREATE_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FL
  */
 if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_CREATE_FLAG) {
 
-  // 新規データを現在のJsonデータに追加。（最後尾）
-  $mergedData = $dataObj->addNewData($_POST, $targetJsonData);
+  if ((isset($_REQUEST["chkno"]) == true) && (isset($_SESSION["chkno"]) == true) && ($_REQUEST["chkno"] == $_SESSION["chkno"])) {
 
-  // マージされたデータをjsonファイルにする
-  $jsonData->updateJsonData($path, $mergedData);
+    // 新規データを現在のJsonデータに追加。（最後尾）
+    $mergedData = $dataObj->addNewData($_POST, $targetJsonData);
 
-  // jsonデータを再読み込み
-  $targetJsonData = $jsonData->getJsonData($path);
+    // マージされたデータをjsonファイルにする
+    $jsonData->updateJsonData($path, $mergedData);
 
-  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
+    // jsonデータを再読み込み
+    $targetJsonData = $jsonData->getJsonData($path);
+  }
 }
 
 // /////////////////////////////////////////////////////////////////////////
@@ -83,16 +86,26 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_CREATE_FL
  * 削除：削除データがPOSTされてきた場合
  */
 if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_DELETE_FLAG) {
-  // データを削除する
-  $deletedData = $dataObj->deleteData($_POST["id"], $targetJsonData);
+  if ((isset($_REQUEST["chkno"]) == true) && (isset($_SESSION["chkno"]) == true) && ($_REQUEST["chkno"] == $_SESSION["chkno"])) {
+    // データを削除する
+    $deletedData = $dataObj->deleteData($_POST["id"], $targetJsonData);
 
-  // マージされたデータをjsonファイルにする
-  $jsonData->updateJsonData($path, $deletedData);
+    // マージされたデータをjsonファイルにする
+    $jsonData->updateJsonData($path, $deletedData);
 
-  // jsonデータを再読み込み
-  $targetJsonData = $jsonData->getJsonData($path);
+    // jsonデータを再読み込み
+    $targetJsonData = $jsonData->getJsonData($path);
+  }
+}
 
-  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
+/**
+ * 全消し：全データ削除
+ */
+if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_ALL_DELETE_FLAG) {
+  if ((isset($_REQUEST["chkno"]) == true) && (isset($_SESSION["chkno"]) == true) && ($_REQUEST["chkno"] == $_SESSION["chkno"])) {
+    $deleteData = [];
+    $jsonData->updateJsonData($path, $deleteData);
+  }
 }
 
 // /////////////////////////////////////////////////////////////////////////
@@ -111,17 +124,15 @@ if ($_POST["dispFlag"] === EDIT_FLAG && $_POST["opeDataFlag"] === DATA_NONE_FLAG
 
 // 編集：編集画面からデータを取得した場合
 if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_EDIT_FLAG) {
+  if ((isset($_REQUEST["chkno"]) == true) && (isset($_SESSION["chkno"]) == true) && ($_REQUEST["chkno"] == $_SESSION["chkno"])) {
+    $replacedData = $dataObj->replaceData($_POST, $targetJsonData);
 
-  $replacedData = $dataObj->replaceData($_POST, $targetJsonData);
+    // 置きかえたデータをjsonファイルにする
+    $jsonData->updateJsonData($path, $replacedData);
 
-  // 置きかえたデータをjsonファイルにする
-  $jsonData->updateJsonData($path, $replacedData);
-
-  // jsonデータを再読み込み
-  $targetJsonData = $jsonData->getJsonData($path);
-
-  // opeDataFlagを空に
-  $_POST["opeDataFlag"] = DATA_NONE_FLAG;
+    // jsonデータを再読み込み
+    $targetJsonData = $jsonData->getJsonData($path);
+  }
 }
 
 // 移動
@@ -139,6 +150,7 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
   $_POST["opeDataFlag"] = DATA_NONE_FLAG;
 }
 
+$_SESSION["chkno"] = $chkno = mt_rand();
 ?>
 
 <!DOCTYPE html>
@@ -163,9 +175,9 @@ if ($_POST["dispFlag"] === LIST_FLAG && $_POST["opeDataFlag"] === DATA_MOVE_UP_F
 </head>
 
 <body>
-  <main class="bg-gray-100 rounded-2xl relative w-min pr-4">
+  <main class="bg-gray-100 rounded-2xl relative w-min pr-4 h-full">
     <div class="flex">
-      <div class="my-4 ml-4 shadow-lg relative" style="width: 320px;">
+      <div class="my-4 ml-4 shadow-lg relative h-screen" style="width: 320px;">
         <?php include(dirname(__FILE__, 2) . "/php/view/partial/sidebar.php"); ?>
       </div>
 

@@ -5,7 +5,7 @@
     <div class="mx-auto mt-8">
 
       <div class="mb-4">
-        <h1 class="font-sanserif text-3xl font-bold">新規追加</h1>
+        <h1 class="font-sanserif text-3xl font-bold">注目予定追加</h1>
         <div class="flex justify-start mt-10">
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="nationalflag">
@@ -24,13 +24,14 @@
         <form action="" method="POST">
           <input type="hidden" name="dispFlag" value="list">
           <input type="hidden" name="opeDataFlag" value="created">
+          <input name="chkno" type="hidden" value="<?php echo $chkno; ?>">
 
           <input class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="listid" type="hidden" name="id" value="<?php echo $createdId; ?>" />
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="listDate">年月日（yyyymmdd形式）<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="listDate">年月日（yyyymmdd形式）<span class="text-pink-500 text-xs ml-3">※必須</span></label>
 
-            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" placeholder="予定項目の年月日を入力してください。（例：20220715）" required autofocus />
+            <input id="listDate" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="date" placeholder="予定項目の年月日を入力してください。曜日自動取得のため「年」必須です。（例：20220715）" required autofocus />
           </div>
 
           <div class="mt-8">
@@ -44,13 +45,13 @@
           </div>
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="plan">テキスト<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="plan">テキスト<span class="text-pink-500 text-xs ml-3">※必須</span></label>
 
             <input id="plan" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="plan" placeholder="注目予定テキストを入力してください。（例：FOMC FRBパウエル議長会見）" required />
           </div>
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="paintParts">色付け部分</label>
+            <label class="block text-sm font-bold text-gray-700" for="paintParts">着色テキスト</label>
 
             <input id="paintParts" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="paintParts" placeholder="予定文の中で色をつけたい箇所を記入してください。（例：パウエル）" />
           </div>

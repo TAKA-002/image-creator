@@ -20,7 +20,11 @@ $flagsList = $flagfileObj->getFlagJsonData();
 $extension = substr(strrchr($_FILES['uploadFile']['name'], '.'), 1);
 
 // $_FILESで送られてきたファイルが画像であるか確認するための変数
-$filetype = "image/$extension";
+if ($extension === "jpg") {
+  $filetype = "image/jpeg";
+} else {
+  $filetype = "image/$extension";
+}
 
 // エラーテキストを格納する配列
 $errorMsgs = [];
@@ -71,7 +75,7 @@ if (count($errorMsgs) === 0) {
   /**
    * CSSファイルにクラスを追加
    */
-  $flagFile->updateFlagCss($_POST["nationalFlagName"]);
+  $flagFile->updateFlagCss($_POST["nationalFlagName"], $extension);
 }
 
 ?>

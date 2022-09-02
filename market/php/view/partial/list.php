@@ -5,13 +5,13 @@
     <div class="mx-auto mt-8">
 
       <div class="mb-4">
-        <h1 class="font-sanserif text-3xl font-bold">リスト</h1>
+        <h1 class="font-sanserif text-3xl font-bold">注目予定リスト</h1>
         <div class="flex justify-start mt-10">
 
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="create">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>新規追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75" autofocus>注目予定追加</button>
           </form>
 
           <form action="" method="POST">
@@ -20,19 +20,17 @@
             <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">国旗追加</button>
           </form>
 
-          <!-- <button class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75" id="outImage" type="button">Download（不調）</button>
-          <a id="download" href="#"></a> -->
+          <form action="" method="POST">
+            <input type="hidden" name="dispFlag" value="list">
+            <input type="hidden" name="opeDataFlag" value="allDelete">
+            <input name="chkno" type="hidden" value="<?php echo $chkno; ?>">
 
-          <!-- 
-          <form action="./php/view/actions/transformData.php" method="POST">
-            <input type="hidden" name="opeDataFlag" value="transform">
-            <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">画像用JSON作成</button>
+            <button type="submit" class="px-4 py-2 mx-2 rounded-md text-white bg-red-700 hover:bg-opacity-75">予定全消し</button>
           </form>
-          -->
         </div>
       </div>
 
-      <div class="overflow-x-scroll">
+      <div>
         <table class="table-fixed w-full">
           <thead>
             <tr>
@@ -40,7 +38,7 @@
               <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">年月日</th>
               <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 border-b border-gray-200 bg-gray-50">国旗</th>
               <th style="width: 440px" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">テキスト</th>
-              <th style="width: 200px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">色付け部分</th>
+              <th style="width: 200px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">着色テキスト</th>
               <th style="width: 120px;" class="py-3 px-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 border-b border-gray-200 bg-gray-50">カラー</th>
               <th style="width: 80px;" class="py-3 px-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">編集</th>
             </tr>
@@ -125,6 +123,7 @@
                   <form action="" method="POST">
                     <input type="hidden" name="dispFlag" value="list">
                     <input type="hidden" name="opeDataFlag" value="deleted">
+                    <input name="chkno" type="hidden" value="<?php echo $chkno; ?>">
                     <input type="hidden" name="id" value="<?php echo $listData["id"]; ?>">
                     <button type="submit">
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600 hover:text-red-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">

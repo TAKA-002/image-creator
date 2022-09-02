@@ -10,7 +10,7 @@
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="create">
             <input type="hidden" name="opeDataFlag" value="nodata">
-            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">新規追加</button>
+            <button style="background-color: rgb(30 41 59);" class="px-4 py-2 mx-2 rounded-md text-white hover:opacity-75">注目予定追加</button>
           </form>
           <form action="" method="POST">
             <input type="hidden" name="dispFlag" value="list">
@@ -24,20 +24,20 @@
         <form action="./php/view/actions/addNationalFlag-comp.php" method="POST" enctype="multipart/form-data">
 
           <div class="mt-8">
-            <label class="form-label block text-sm font-bold text-gray-700" for="flagImgFile">ファイル<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="form-label block text-sm font-bold text-gray-700" for="flagImgFile">ファイル<span class="text-pink-500 text-xs ml-3">※必須 w34px h23pxの画像を選択してください。</span></label>
             <div class="my-3 w-full">
               <input class="form-control block w-full px-3 py-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="flagImgFile" name="uploadFile" required autofocus>
             </div>
           </div>
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="flagName">CSSクラス名・画像ファイル名<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="flagName">CSSクラス名・画像ファイル名<span class="text-pink-500 text-xs ml-3">※必須</span></label>
 
             <input id="flagName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="nationalFlagName" placeholder="国旗の略名を半角英字で入力してください。（例 US）" required />
           </div>
 
           <div class="mt-8">
-            <label class="block text-sm font-bold text-gray-700" for="countryName">国名<span class="text-pink-500 text-xs ml-3">必須</span></label>
+            <label class="block text-sm font-bold text-gray-700" for="countryName">国名<span class="text-pink-500 text-xs ml-3">※必須</span></label>
 
             <input id="countryName" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" name="countryName" placeholder="国旗の国名を入力してください。（例 アメリカ）" required />
           </div>
